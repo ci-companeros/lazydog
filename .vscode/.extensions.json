@@ -1,0 +1,27 @@
+/*
+Purpose: 
+This file recommends useful VS Code extensions to install when opening the project, ensuring a consistent development environment across different machines.
+*/
+
+{
+    "recommendations": [
+      // Recommended extension for Python development in VS Code.
+      "ms-python.python",
+  
+      // Extension to lint and automatically fix JavaScript/TypeScript code.
+      "dbaeumer.vscode-eslint",
+  
+      // Prettier is a code formatter for various languages (JavaScript, Python, etc.).
+      "esbenp.prettier-vscode",
+  
+      // Automatically closes HTML tags as you type, useful in web development.
+      "formulahendry.auto-close-tag",
+  
+      // SASS (Syntactically Awesome Stylesheets) support for better syntax highlighting and linting.
+      "syler.sass-indented",
+  
+      // Provides custom file and folder icons in the VS Code explorer.
+      "vscode-icons-team.vscode-icons"
+    ]
+  }
+  

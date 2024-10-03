@@ -1,0 +1,48 @@
+/*
+Purpose: 
+This file defines your personal VS Code editor settings, such as file exclusions, formatting rules, themes, and specific language configurations.
+*/
+
+{
+    // This section defines files and directories to exclude from VS Code’s file explorer.
+    "files.exclude": {
+      "**/.DS_Store": true,  // macOS system file
+      "**/node_modules": true,  // Node.js dependencies
+      "**/env": true,  // Python virtual environment
+      "**/.git": true,  // Git files
+      "**/__pycache__": true  // Python cache files
+    },
+    
+    // This setting automatically formats your code when saving the file.
+    "editor.formatOnSave": true,
+  
+    // Sets the number of spaces for indentation (set to 2 here, can be adjusted based on preferences).
+    "editor.tabSize": 2,
+  
+    // Sets the overall color theme of the VS Code editor.
+    "workbench.colorTheme": "Visual Studio Dark",
+  
+    // Path to the Python interpreter (virtual environment). Can be customized based on your environment setup.
+    "python.pythonPath": "env/bin/python3",
+  
+    // Enables GPU acceleration for better terminal performance (useful for large outputs).
+    "terminal.integrated.gpuAcceleration": "on",
+  
+    // Enables ESLint, a tool to analyze and fix issues in JavaScript/TypeScript code.
+    "eslint.enable": true,
+    "cSpell.words": [
+      "arctictern",
+      "Cloudinary",
+      "eventyret",
+      "formulahendry",
+      "hookyqr",
+      "keymap",
+      "PGHOSTADDR",
+      "rudge",
+      "runserver",
+      "toolsai",
+      "venv",
+      "virtualenv"
+    ]
+  }
+  

@@ -1,0 +1,29 @@
+/*
+Purpose: 
+This file configures debugging settings for different environments, such as Python/Django and Node.js/React, allowing you to run and debug your applications directly within VS Code.
+*/
+
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        // Configuration for running and debugging a Django (Python) project.
+        "name": "Python: Django",
+        "type": "python",
+        "request": "launch",
+        "program": "${workspaceFolder}/manage.py",  // Points to Django's main script
+        "args": ["runserver"],  // Tells Django to run the local development server
+        "django": true,  // Tells VS Code that this is a Django app
+        "console": "integratedTerminal"  // Uses VS Code’s terminal for output
+      },
+      {
+        // Configuration for running and debugging a Node.js application (for JavaScript/React projects).
+        "name": "Node.js: Launch Program",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/src/scripts/app.js",  // Main entry point of the Node.js/React app
+        "console": "integratedTerminal"  // Uses VS Code’s terminal for output
+      }
+    ]
+  }
+  

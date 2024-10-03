@@ -1,0 +1,41 @@
+# .gitpod.yml
+#
+# This file configures the Gitpod workspace environment for the project.
+# It specifies which Dockerfile to use, initializes tasks during workspace setup,
+# and installs necessary VS Code extensions for an optimal development experience.
+# 
+# Key sections:
+# 1. **Image**: Uses the custom Dockerfile `.gitpod.dockerfile` to define the 
+# environment (Node.js, Python, PostgreSQL, MongoDB, etc.).
+# 2. **Tasks**: Defines commands to be run during the initialization of the workspace.
+#    - The `init` task runs a setup script to prepare the environment.
+#    - The `command` task ensures PostgreSQL is started and runs other utility 
+#      scripts (e.g., uptime monitoring).
+# 3. **VS Code Extensions**: Recommends specific extensions to install in the 
+#    Gitpod workspace for features like Python support, Jupyter, 
+#    Bootstrap snippets, and more.
+#
+# Author: JaqiKal
+
+# Define the custom Docker image for Gitpod, which installs Node.js, Python, PostgreSQL, and other tools.
+image:
+  file: .gitpod.dockerfile  # Path to the custom Dockerfile that sets up the environment
+
+# Define tasks to run when the workspace is initialized
+tasks:
+  - init: . ${GITPOD_REPO_ROOT}/.vscode/init_tasks.sh  # This runs the initialization script (e.g., for setting up Python virtualenv, SQLite configs, etc.)
+    command: /home/gitpod/.pg_ctl/bin/pg_start > /dev/null  # Start PostgreSQL silently after initialization
+  - command: . ${GITPOD_REPO_ROOT}/.vscode/uptime.sh &  # Run the uptime script in the background to gather basic usage stats
+
+# VS Code settings for the Gitpod workspace
+vscode:
+  extensions:
+    # Recommended extensions that Gitpod should install for an optimized development environment
+    - ms-python.python  # Python extension for coding, linting, and debugging Python apps
+    - formulahendry.auto-close-tag  # Auto-close HTML tags as you type
+    - eventyret.bootstrap-4-cdn-snippet  # Adds Bootstrap 4 snippets for quicker HTML/CSS development
+    - hookyqr.beautify  # Extension to automatically format HTML, CSS, and JavaScript
+    - matt-rudge.auto-open-preview-panel  # Automatically opens the browser preview panel when working on web projects
+    - ms-toolsai.jupyter  # Jupyter support for running and editing notebooks in VS Code
+    - ms-toolsai.jupyter-keymap  # Keymap support for Jupyter notebooks
+    - ms-toolsai.jupyter-renderers  # Renderers to improve Jupyter output, such as interactive charts and tables
