@@ -1,8 +1,8 @@
 # LazyDog - student resource platform
 <div style="display: flex; justify-content: space-around;">
-  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 30%; border-radius: 5%;">
-  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 30%; border-radius: 5%;">
- <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 30%; border-radius: 5%;">
+  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
+  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
+ <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
 </div>
 
 ## Summary of Core Features
