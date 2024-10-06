@@ -164,9 +164,8 @@
 
 ### Backend
 
-- Node.js with Express for handling user authentication and resource submissions.
-
-or Django REST Framework.  [jaqi]
+- Node.js with Express for handling user authentication and resource submissions
+- TBD!  or Django REST Framework.  [jk]
 
 
 - PostgreSQL for the database (storing users, resources, comments etc.).
