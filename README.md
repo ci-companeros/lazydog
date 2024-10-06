@@ -1,146 +1,183 @@
-# Custom VSCode Project Starter
+# LazyDog - student resource platform
+<div style="display: flex; justify-content: space-around;">
+  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
+  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
+ <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
+</div>
 
-This repository provides a customizable starter template for development projects using both **Gitpod** and **VS Code** environments. It is pre-configured with tools like Node.js, Python, PostgreSQL, MongoDB, and Heroku, and includes useful scripts to streamline development.
+## Summary of Core Features
 
-## Features
+1. _User Accounts_:
 
-- Ready-to-use in **Gitpod** and **VS Code**.
-- Supports **Node.js**, **Python** (with virtual environments), **PostgreSQL**, **MongoDB**, and **Heroku CLI**.
-- Pre-configured **VS Code settings** and **Gitpod tasks**.
-- Includes Python linting, code formatting, and additional tools.
-- Easy-to-use custom aliases for frequently used commands.
+   - Users sign up with a username and password.
+   - Logged-in users gain access to additional features, such as submitting resources, rating, and commenting.
 
----
+2. _Categorized Resource Listings_:
 
-## Getting Started
+   - Resources are divided into categories (e.g., programming languages, frameworks, tools, etc.) and are fully searchable.
 
-### For Gitpod Users
+   1. **Project 1 - Introduction to Web dev**
+      - Tech covered: HTML, CSS
+      - Subcategories:
+        - HTML: Docs, arcticles, youtube, games
+        - CSS: -"-
+   2. **Project 2 - Javascript fundamentals**
+      - Tech covered: Javascript
+      - Subcategories:
+        - Docs, articles, youtube, games
+   3. **Project 3 - Python Basics**
+      - Tech covered: Python
+      - Subcategories:
+        - Docs, articles, youtube, games
+   4. **Project 4 - Frameworks & Databases**
+      - Tech covered: Django, PostgresSQL
+      - Subcategories:
+        - Docs, articles, youtube, games
+   5. **Project 5 - Specializations**
+      - Tech covered: Advanced Frontend, Predictive Analytics, E-commerce
+      - Subcategories:
+        - Docs, articles, youtube, games
 
-1. **Open the Repository in Gitpod**:
-   - You can directly open the repository in Gitpod by navigating to the repository page and clicking the **Gitpod** button (if you have the Gitpod browser extension installed) or by prepending `gitpod.io/#` to the repo URL.
+3. _Resource Submission Form_:
+   - Users can submit URLs along with a short description, stating why the resource is useful and what it’s for.
+   - Users must choose a category for the resource.
 
-     ```bash
-     https://gitpod.io/#https://github.com/yourusername/jaqi-vscode-project-starter
-     ```
-
-2. **Automatic Setup**:
-   - The `.gitpod.yml` and `.gitpod.dockerfile` are configured to automatically set up your development environment. This includes:
-     - Installing Node.js, Python, PostgreSQL, MongoDB, and Heroku CLI.
-     - Creating a virtual environment for Python.
-     - Installing all Python dependencies from `requirements.txt`.
-
-3. **Starting the Project**:
-   - Run the Django development server:
-
-     ```bash
-     python3 manage.py runserver 0.0.0.0:8000
-     ```
-
-   - You can use pre-configured aliases, such as:
-
-     ```bash
-     run     # Alias for running the Django development server
-     ```
-
-4. **PostgreSQL & MongoDB**:
-   - PostgreSQL and MongoDB are pre-installed and can be started automatically.
-   - The alias `set_pg` configures the `PGHOSTADDR` environment variable for PostgreSQL.
-
-### For VS Code Users
-
-1. **Clone the Repository**:
-   - Clone the repository to your local machine:
-
-     ```bash
-     git clone https://github.com/yourusername/jaqi-vscode-project-starter.git
-     cd jaqi-vscode-project-starter
-     ```
-
-2. **Python Virtual Environment Setup**:
-   - Create a virtual environment (if you’re using Python):
-
-     ```bash
-     python3 -m venv env
-     source env/bin/activate
-     ```
-
-3. **Install Dependencies**:
-   - Install Python dependencies:
-
-     ```bash
-     pip install -r requirements.txt
-     ```
-
-4. **VS Code Configuration**:
-   - This repository includes pre-configured **VS Code settings** and **debugging configurations** for Django:
-     - Open the repository folder in VS Code.
-     - Use the **`launch.json`** file to run and debug the Django app by pressing `F5` or clicking the green "play" button.
-
-5. **Custom Aliases**:
-   - If you wish to use the custom aliases (like `run` for starting Django), add the following to your `.bashrc` or `.zshrc`:
-
-     ```bash
-     alias run="python3 manage.py runserver 0.0.0.0:8000"
-     ```
+4. _Community Interaction_:
+   - Logged-in users can rate resources and leave comments, creating a feedback loop for which resources are most helpful.
 
 ---
 
-## Project Structure
+## Platform Structure
 
-```bash
-project-root/
-├── .gitpod.yml                # Gitpod tasks and extensions configuration
-├── .gitpod.dockerfile         # Dockerfile to set up the Gitpod environment
-├── .vscode/                   # VS Code settings for the project
-│   ├── settings.json          # Formatting and editor settings
-│   ├── launch.json            # Debug configurations for Django
-│   ├── extensions.json        # Recommended VS Code extensions
-│   ├── init_tasks.sh          # Initialization script (e.g., for SQLite, virtualenv)
-│   ├── repo_updater.py        # Script for repository migrations and updates
-│   ├── uptime.sh              # Script to track uptime and monitor basic stats
-│   ├── heroku_config.sh       # Script to configure Heroku API key
-│   └── make_url.py            # Utility for creating Cloudinary URLs from config
-├── requirements.txt           # Python dependencies
-├── manage.py                  # Django entry point
-├── README.md                  # This file
-├── .gitignore                 # Ignored files and directories
-└── ...                        # Other project files
-```
+### 1. User Authentication (Signup/Login)
 
-## Custom Scripts and Aliases
+- _Sign Up_:
+  - Fields: Username, password. (email)
+  - Optional: Email verification to prevent spam.
+- _Login_:
+  - Fields: Username, password.
+  - "Forgot password" flow for recovery.
 
-This project includes several useful scripts and aliases for Gitpod users and developers:
+### 2. Categorized Resource Listings
 
-- **repo_updater.py**: A Python script to help with migration tasks or repository version control updates.
-- **heroku_config.sh**: Configures your Heroku CLI with your API key.
-- **Custom Aliases**:
-  - **run**: Alias to run the Django server.
-  - **set_pg**: Configures PostgreSQL's `PGHOSTADDR` variable.
-  - **mongo**: Alias for running MongoDB shell commands.
+- _Categories_:
+  - Divide resources into logical groups like:
+    - Programming Languages and frameworks (Html, CSS, JavaScript, Python, Django etc.)
+    - Tools (IDEs, testing tools, etc.)
+  - Each category should be filterable and searchable.
+- _Search_:
+  - A dynamic search bar to filter by keywords.
+  - Optional: Filters like "highest-rated," "most recent."
 
-## Recommended Extensions
+### 3. Resource Submission Form
 
-These extensions will be automatically installed in Gitpod and are recommended for VS Code users:
+- Available only to logged-in users.
+- _Fields_:
 
-- **Python** (`ms-python.python`): For Python development.
-- **Auto Close Tag** (`formulahendry.auto-close-tag`): Automatically close HTML tags.
-- **Beautify** (`hookyqr.beautify`): Code formatter for HTML, CSS, and JavaScript.
-- **Bootstrap 4 CDN Snippets** (`eventyret.bootstrap-4-cdn-snippet`): Quick Bootstrap 4 snippets.
-- **Jupyter** (`ms-toolsai.jupyter`): Jupyter notebook support in VS Code.
+  - URL link (required).
+  - Short description (required): Why the resource is useful.
+  - Category selection (dropdown - required).
 
-## FAQs
+- _Submission Review_:
+  - Auto-approval or admin approval for submitted resources (depending on how open we want it)?
 
-### How do I contribute to this project?
+### 4. Rating & Commenting System
 
-1. Fork the repository.
-2. Make your changes.
-3. Open a pull request!
+- _Ratings_:
+  - Simple 1-5 star system or thumbs up/thumbs down.
+  - Aggregate rating score displayed on each resource.
+- _Comments_:
+  - Logged-in users can leave short reviews or comments on each resource.
+  - Optional: Upvote/downvote system for comments to highlight helpful feedback.
 
-### Made By
+### 5. Admin Dashboard (Optional)
 
-[JaqiKal](https://github.com/JaqiKal/)
+- _Moderation_:
+  - Admins can approve/reject submitted resources.
+  - Flagged comments or resources can be reviewed and moderated.
+- _Analytics_:
+  - Track which resources are most popular, user engagement, etc.
+
+---
+
+## Initial Design Plan
+
+### 1. Homepage (Landing Page)
+
+- _Header_:
+  - Site logo, navigation links (Home, Resources (categories dropdown), Contribute (form), About, Login/Signup).
+- _Search Bar_:
+  - Prominent search feature to allow users to quickly find resources via keywords.
+- _Popular Categories_:
+  - Highlight the main categories (e.g., Programming, Tools).
+- _Trending/Top Resources_:
+  - Display a few trending or highly rated resources.
+- _Call to Action_:
+  - Encourage users to sign up to contribute and interact with the platform.
+
+### 2. Resource Listing Page
+
+- _Category View_:
+  - When a category is selected, display all resources under that category.
+  - Include a sidebar or top filter options for sorting by rating, date, etc.
+- _Individual Resource Cards_:
+  - Each resource card displays:
+    - Title, description, category.
+    - Star rating or number of likes.
+    - Comment count.
+    - Option to “view details” to go to the full page?
+
+### 3. Resource Detail Page
+
+- _Full Resource View_:
+  - Display full resource description and link.
+  - Show comments and ratings.
+- _Interactive Section_:
+  - Logged-in users can rate the resource and leave a comment.
+
+### 4. User Dashboard
+
+- Available after login.
+- _Tabs_:
+  - _My Submissions_: List of resources the user has submitted, with edit/delete options.
+  - _My Comments_: History of comments the user has left.
+- _Submit Resource_: Quick access to the resource submission form.
+
+### 5. Sign-Up / Login Page
+
+- Clean and simple form layout.
+- Option for social login (if desired, e.g., Google, GitHub) to make the process faster.
+
+### 6. Admin Dashboard (Optional)
+
+- _Resource Management_: Admins can see a queue of newly submitted resources for approval.
+- _User Management_: Option to manage user accounts, if needed.
+
+---
+
+## Technology Stack
+
+### Frontend
+
+- HTML/CSS/JavaScript (React.js for a dynamic UI).
+- Tailwind CSS for responsive design.
+
+### Backend
+
+- Node.js with Express for handling user authentication and resource submissions
+- TBD!  or Django REST Framework.  [jk]
 
 
-### I’m getting an error with PostgreSQL or MongoDB in Gitpod. What should I do?
+- PostgreSQL for the database (storing users, resources, comments etc.).
 
-- Ensure that you are using the correct aliases and environment variables to start and configure the databases.
+### Authentication
+
+- OAuth for secure login.?
+
+### Hosting
+
+- Vercel/Netlify for frontend.?
+- Oracle/Google Cloud/AWS for backend and database.?
+- Firebase (part of google cloud) have auth, database storage
+
+-*[EVondrus](https://github.com/EVondrus)*
