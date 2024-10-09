@@ -37,12 +37,14 @@ This file defines your personal VS Code editor settings, such as file exclusions
       "formulahendry",
       "hookyqr",
       "keymap",
+      "Nicl",
       "PGHOSTADDR",
       "rudge",
       "runserver",
       "toolsai",
       "venv",
-      "virtualenv"
+      "virtualenv",
+      "Vondrus"
     ]
   }
   
