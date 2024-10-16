@@ -56,14 +56,9 @@ This site [ADD DESCRIPTION]
 > *Output*: A detailed list of the features, functionalities, and requirements that need to be developed.
 
 <details>
-  <summary><strong>User Stories</strong></summary>
+  <summary><strong>User Stories</strong></summary><br>
 
-| Title | User Story | Epic |
-|---|---|---|
-| [Initialize Project Repository on GitHub](https://github.com/ci-companeros/lazydog/issues/1) | As a developer, I can create a repository on GitHub so that we have a centralized location for our project code, allowing collaboration and version control from the very beginning. | Initialize |
-| [Establish Branch Protection Rules on GitHub](https://github.com/ci-companeros/lazydog/issues/2) | As a developer, I can set up branch protection rules for the main branch so that the integrity of our codebase is maintained through required reviews and status checks before merging. | Initialize |
-| [Create & Update ERD](https://github.com/ci-companeros/lazydog/issues/3) | As a developer I can create an ERD diagram for the database structure so that we can visualize and plan how data will be organized for the application. | Setup |
-| [Create & update Flow chart](https://github.com/ci-companeros/lazydog/issues/4) | As a developer, I can create a flowchart so that I can visually represent the process for better understanding and implementation. | Setup |
+Please visit our [project Kanban board for details](https://github.com/orgs/ci-companeros/projects/2)
 
 <br>
 
