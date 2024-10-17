@@ -28,17 +28,6 @@ LazyDog is a collaborative student resource-sharing platform, designed and built
 
 ## Strategy (Why?)
 
-> `Help Text - to be removed:`  
-> *Goal*: Define the purpose and objectives of your project. Answer questions like `"What are we building?"` and `"Who is it for?"`.
->
-> *Activities*:  
->
-> - Identify user needs and business goals.  
-> - Determine core features and the project's scope.  
-> - Perform market and user research.  
->
-> *Output*: A clear understanding of the product's purpose, the audience, and what success looks like (e.g., features, goals, user personas).
-
 LazyDog was built to address the challenge of finding high-quality, categorized educational resources in one place. It is aimed at students and developers looking to discover or contribute valuable content, with features that encourage community engagement through ratings and comments. The platform helps users enhance their learning journey and share insights from a range of development topics.
 
 *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
@@ -143,18 +132,9 @@ This section outlines the prioritization of features, identifying the essential 
 
 ## Structure (How does it work?)
 
-> `Help Text - to be removed:`  
-> *Goal*: Organize how users will navigate and interact with the application. Establish a logical hierarchy of content and features.
->
-> *Activities*:  
->
-> - Plan information architecture (how content is structured).  
-> - Define workflows, navigation flows, and content organization.  
-> - Create wireframes or basic UI layout.  
->
-> *Output*: Site maps, user flow diagrams, and a clear blueprint of how the application will be structured.
+The platform includes key features such as user authentication, resource categorization, and search functionality, all of which enhance user interaction with educational content. Logged-in users can contribute resources, rate them, and leave comments, creating an interactive feedback loop that highlights the most useful resources. 
 
-The platform features user authentication, resource categorization, and search functionality, allowing users to interact with educational content. Logged-in users can submit resources, rate them, and leave comments, creating a feedback loop for what content is most helpful.
+This section provides an overview of the platform’s structure, including user workflows, visual layout (wireframes), and database design (ERD), which together guide the user experience and data flow throughout the application.
 
 <details>
   <summary><strong>Platform Structure</strong></summary>
@@ -209,90 +189,79 @@ The platform features user authentication, resource categorization, and search f
 
 </details>
 
+<details>
+  <summary><b>Flow diagram</b></summary>
+  
+The flow diagram illustrates the user's journey through the platform, showing how they interact with features such as signing up, submitting resources, and providing feedback.
+
+![Flow Diagram](path_to_flow_diagram_image)
+
+</details>
+
+<details>
+  <summary><b>Wireframes</b></summary>
+  
+The wireframes provide a visual representation of the platform's interface, showing the layout and positioning of elements.
+
+![Wireframe 1](#path_to_wireframe_image)
+
+</details>
+
+<details>
+  <summary><b>Entity Relationship Diagram (ERD)</b></summary>
+  
+The ERD illustrates the structure of the database and the relationships between entities, such as users, resources, ratings, and comments.
+
+![ERD](#path_to_erd_image)
+
+</details>
+
+*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+
+
 ## Skeleton (How is it designed?)
 
-> `Help Text - to be removed:`  
-> *Goal*: Lay out the user interface with more detail, focusing on the layout, positioning, and interaction of individual components.
->
-> *Activities*:  
->
-> - Design the interface elements (e.g., buttons, forms, post components).  
-> - Work on component hierarchy, placement of UI elements.  
-> - Ensure usability and interactivity (interaction design).  
->
-> *Output*: Detailed wireframes, mockups, and a more refined UI design with placement of specific elements.
-
-The wireframes and initial design focus on a clean, intuitive user interface. Resources are organized into searchable categories, and the navigation is designed to guide users through the submission, browsing, and interaction process effortlessly.
+This section focuses on the detailed design of individual components within the platform. It provides insights into the layout and interaction of key elements such as buttons, forms, and resource cards. The goal is to create an intuitive, user-friendly experience that enhances navigation and interaction with the platform.
 
 <details>
   <summary><strong>Initial Design Plan</strong></summary>
 
-1. Homepage (Landing Page)
-   - *Header*:
-     - Site logo, navigation links (Home, Resources (categories dropdown), Contribute (form), About, Login/Signup).
-   - *Search Bar*:
-     - Prominent search feature to allow users to quickly find resources via keywords.
-   - *Popular Categories*:
-     - Highlight the main categories (e.g., Programming, Tools).
-   - *Trending/Top Resources*:
-     - Display a few trending or highly rated resources.
-   - *Call to Action*:
-     - Encourage users to sign up to contribute and interact with the platform.
+1. **Homepage (Landing Page)**
+   - *Header*: Contains site logo and navigation links (Home, Resources, (categories dropdown), Contribute (form), About, Login/Signup).
+   - *Search Bar*: Prominent search bar for quick access to resources.
+   - *Popular Categories*: Highlights the main categories such as Programming and Tools.
+   - *Trending Resources*: Displays top-rated or recently popular resources.
+   - *Call to Action*: Encourages users to sign up to contribute and engage with the platform.
 
-2. Resource Listing Page
+2. **Resource Cards / Resource Listin Page**
+   - Each *individual resource* is displayed as a card, showing the title, description, category, (star-)rating, no of likes and comments.
+   - *Interaction Elements*: Includes buttons for viewing more details, rating, and leaving comments.
+   - *Category View*: When a category is selected, display all resources under that category.
+   - *Additionals*: Include a sidebar or top filter options for sorting by rating, date, etc.
 
-   - *Category View*:
-     - When a category is selected, display all resources under that category.
-     - Include a sidebar or top filter options for sorting by rating, date, etc.
-   - *Individual Resource Cards*:
-     - Each resource card displays:
-       - Title, description, category.
-       - Star rating or number of likes.
-       - Comment count.
-       - Option to “view details” to go to the full page?
+3. **Forms**
+   - *Signup/Login Form*: Simple, user-friendly forms with fields for username and password. Optional email field for signup and/or option for social login (if desired, e.g., Google, GitHub) to make the process faster.
+   - *Resource Submission Form*: Allows logged-in users to submit resources, including fields for the URL, description, and category selection.
 
-3. Resource Detail Page
+4. **Resource Detail Page**
+   - *Full Resource View*: Display full resource description and link. Show comments and ratings.
+   - *Interactive Section*: Logged-in users can rate the resource and leave a comment.
 
-   - *Full Resource View*:
-     - Display full resource description and link.
-     - Show comments and ratings.
-   - *Interactive Section*:
-     - Logged-in users can rate the resource and leave a comment.
-
-4. User Dashboard
-
+5. **User Dashboard**
    - Available after login.
-   - *Tabs*:
-     - *My Submissions*: List of resources the user has submitted, with edit/delete options.
-     - *My Comments*: History of comments the user has left.
-   - *Submit Resource*: Quick access to the resource submission form.
+     - *My Submissions*: Displays the user's submitted resources with options to edit or delete.
+     - *My Comments*: Shows a history of the user’s comments.
+   - *Submit Resource*: Direct access to the submission form.
 
-5. Sign-Up / Login Page
-
-   - Clean and simple form layout.
-   - Option for social login (if desired, e.g., Google, GitHub) to make the process faster.
-
-6. Admin Dashboard (Optional)
-
-   - *Resource Management*: Admins can see a queue of newly submitted resources for approval.
-   - *User Management*: Option to manage user accounts, if needed.
+6. **Admin Dashboard (Optional)**
+   - For moderation and analytics, admins can manage submitted resources, review flagged content, and track engagement.
+     i.e. Admins can see a queue of newly submitted resources for approval, option to manage user accounts, if needed.
 
 *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
 
 </details>
 
 ## Surface (What does it look like?)
-
-> `Help Text - to be removed:`  
-> *Goal*: Focus on the visual design, colors, typography, and final aesthetic details of the interface.
->
-> *Activities*:  
->
-> - Apply visual design principles, such as color schemes, fonts, and spacing.  
-> - Ensure consistency in branding, style, and responsiveness.  
-> - Implement final interactive details (animations, transitions, etc.).  
->
-> *Output*: The finished user interface with a polished look and feel, ready for final deployment.
 
 The platform has a modern design with a focus on usability and accessibility. The color scheme and typography were carefully selected to maintain readability, while responsive design ensures usability across different device types.
 
@@ -301,7 +270,7 @@ The platform has a modern design with a focus on usability and accessibility. Th
   
 *Placeholder palette- to be removed*
 
-[!!....  Add RATIONALE to the palette ....!!]
+[...  Add RATIONALE to the palette ...]
 
 ![Placeholder palette - to be removed](./docs/readme-img/placeholder%20palette%20-%20to%20be%20removed.webp)
 
@@ -342,8 +311,7 @@ The platform has a modern design with a focus on usability and accessibility. Th
 - [Github](https://github.com/) is essential for version control, allowing you to track changes, collaborate with others (if applicable), and secure online code storage.
 - [Google Dev Tools](https://developers.google.com/web/tools) is used during testing, debugging and styling.
 - [Google Fonts](https://fonts.google.com/) is a catalog of free, open-source fonts. Used for typography.
-- [Heroku](https://www.heroku.com) ia a platform for deploying and hosting web applications.
-- [Look](https:www.looka.com) ia used for the logo and symbol.
+- [Looka](https:www.looka.com) ia used for the logo and symbol.
 - [Markup Validation Service](https://validator.w3.org/) is used to check code ensuring that my HTML is error-free and adheres to the latest web standards.
 - [NVDA](https://www.nvaccess.org/download/), NonVisual Desktop Access is a free and open-source, portable screen reader for Microsoft Windows.
 - [Tiny PNG](https://tinypng.com/) is used to compress images.
