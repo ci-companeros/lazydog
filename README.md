@@ -39,12 +39,13 @@ LazyDog is a collaborative student resource-sharing platform, designed and built
 >
 > *Output*: A clear understanding of the product's purpose, the audience, and what success looks like (e.g., features, goals, user personas).
 
+LazyDog was built to address the challenge of finding high-quality, categorized educational resources in one place. It is aimed at students and developers looking to discover or contribute valuable content, with features that encourage community engagement through ratings and comments. The platform helps users enhance their learning journey and share insights from a range of development topics.
+
 *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
 
 ## Scope (What?)
 
-The goal of the scope definition is to clearly outline the features, functionality, and content that will be included in the project. This ensures that the project remains focused on delivering its core objectives while managing expectations. The scope establishes the boundaries of what will be implemented based on the user needs and the strategy laid out. Defining the scope allows the team to prioritize features and set realistic milestones for development.
-
+This section outlines the core functionality of the platform, the features planned for the MVP (Minimum Viable Product), and the technologies used. The goal was to focus on essential features for resource submission, searchability, and community feedback while allowing for future scalability.
 
 <details>
 <summary><b>Technology Stack</b></summary>
@@ -153,6 +154,8 @@ This section outlines the prioritization of features, identifying the essential 
 >
 > *Output*: Site maps, user flow diagrams, and a clear blueprint of how the application will be structured.
 
+The platform features user authentication, resource categorization, and search functionality, allowing users to interact with educational content. Logged-in users can submit resources, rate them, and leave comments, creating a feedback loop for what content is most helpful.
+
 <details>
   <summary><strong>Platform Structure</strong></summary>
 
@@ -218,6 +221,8 @@ This section outlines the prioritization of features, identifying the essential 
 > - Ensure usability and interactivity (interaction design).  
 >
 > *Output*: Detailed wireframes, mockups, and a more refined UI design with placement of specific elements.
+
+The wireframes and initial design focus on a clean, intuitive user interface. Resources are organized into searchable categories, and the navigation is designed to guide users through the submission, browsing, and interaction process effortlessly.
 
 <details>
   <summary><strong>Initial Design Plan</strong></summary>
@@ -289,6 +294,8 @@ This section outlines the prioritization of features, identifying the essential 
 >
 > *Output*: The finished user interface with a polished look and feel, ready for final deployment.
 
+The platform has a modern design with a focus on usability and accessibility. The color scheme and typography were carefully selected to maintain readability, while responsive design ensures usability across different device types.
+
 <details>
 <summary><b>Color scheme</b></summary><br>
   
@@ -351,6 +358,8 @@ This section outlines the prioritization of features, identifying the essential 
 ## Testing
 The goal of testing is to ensure that the application functions correctly, delivers a smooth user experience, and performs well across different devices and browsers. Testing helps to identify and fix bugs, validate the design, and ensure that the system meets the defined requirements before deployment. 
 
+The project underwent rigorous testing to ensure the functionality works as intended, with special focus on usability and performance across devices. Manual and automated tests were conducted to confirm that the app functions smoothly in various scenarios.
+
 <details>
 <summary><b>What we tested</b></summary>
 <br>
@@ -408,6 +417,8 @@ TBD
 
 <details>
 <summary><b>Code Used</b></summary>
+
+Special thanks to our bootcamp mentors and the following tools and services used throughout the project.
 
   - {{RESOURCE_DESCRIPTION}}, created by {{AUTHOR}} and sourced from [{{SOURCE_NAME}}]({{SOURCE_URL}})
 
