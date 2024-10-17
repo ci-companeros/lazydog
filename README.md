@@ -292,9 +292,9 @@ Please visit our [project Kanban board for details](https://github.com/orgs/ci-c
 <details>
 <summary><b>Frontend</b></summary>
 
-- HTML/CSS/JavaScript (React.js for a dynamic UI).
-- Tailwind CSS for responsive design.
-<br>
+- **HTML/CSS/JavaScript**: Core technologies for building the structure, styling, and interactivity of the website.
+- **React.js**: A popular JavaScript library for building dynamic user interfaces, with components that manage state and handle complex UI interactions.
+- **Tailwind CSS**: A utility-first CSS framework for building custom designs quickly with responsive design out of the box.
 
 *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
 
@@ -303,20 +303,18 @@ Please visit our [project Kanban board for details](https://github.com/orgs/ci-c
 <details>
 <summary><b>Backend</b></summary>
 
-- Node.js with Express for handling user authentication and resource submissions
-- TBD!  or Django REST Framework.
-- PostgreSQL for the database (storing users, resources, comments, etc.).
-<br>
+- **Node.js**: A JavaScript runtime used on the backend to handle requests and manage user authentication and resource submissions.
+- **Django REST Framework**: Used for creating RESTful APIs, allowing communication between the frontend and backend services.
+- **PostgreSQL**: A powerful open-source relational database used to store user accounts, submitted resources, ratings, and comments.
 
-  *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
 
 </details>
 
 <details>
 <summary><b>OAuth</b></summary>
 
-- OAuth for secure login.
-<br>
+- **OAuth**: A secure authentication method allowing users to log in using third-party providers such as Google, GitHub, etc.
 
 *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
 
@@ -325,28 +323,49 @@ Please visit our [project Kanban board for details](https://github.com/orgs/ci-c
 <details>
 <summary><b>Hosting</b></summary>
 
-- Vercel/Netlify for frontend.
-- Oracle/Google Cloud/AWS for backend and database.
-- Firebase (part of Google Cloud) for auth, database storage.
+
+- **Frontend Hosting**: Vercel is used to host the React.js frontend, providing fast, global deployment and a seamless development workflow.
+- **Backend Hosting**: Free-tier hosting solutions (TO BE DECIDED) will be used to host the Node.js/Django backend and PostgreSQL database.
+
 <br>
 
 *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
 
 </details>
 
-## Testing
 
-> `Help Text - to be removed:`  
-> *Goal*: Verify the functionality, usability, and performance of the application.
->
-> *Activities*:  
->
-> - Write unit tests for individual components.  
-> - Perform manual testing to validate navigation and workflows.  
-> - Ensure responsiveness and browser compatibility.  
-> - Validate code
->
-> *Output*: A fully tested application that meets the defined requirements and functions as expected.
+## Testing
+The goal of testing is to ensure that the application functions correctly, delivers a smooth user experience, and performs well across different devices and browsers. Testing helps to identify and fix bugs, validate the design, and ensure that the system meets the defined requirements before deployment. 
+
+<details>
+<summary><b>What we tested:</b></summary>
+<br>
+
+- **Functionality**: Ensured that all features—such as resource submissions, ratings, and comments—work as intended.
+- **Usability**: Validated that users can navigate easily, interact with elements, and complete actions like signing up, logging in, and searching for resources.
+- **Performance**: Checked the app's responsiveness, load times, and efficiency, especially on mobile devices.
+
+</details>
+
+<details>
+<summary><b>How we tested:</b></summary>
+<br>
+
+- **Unit Testing**: Each component and function was tested individually to confirm that they perform correctly in isolation.
+- **Manual Testing**: A hands-on approach was used to simulate real user interactions, validating the flow and behavior of the app in various scenarios.
+- **Cross-Browser and Device Testing**: We ensured the platform works smoothly on different browsers (Chrome, Firefox, Safari) and across multiple screen sizes (mobile, tablet, desktop).
+- **Code Validation**: The code was checked for errors, optimized, and debugged for performance improvements.
+
+</details>
+
+<details>
+<summary><b>Test report</b></summary>
+<br>
+  
+[Test execution result](#)
+
+</details>
+
 
 *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
 
