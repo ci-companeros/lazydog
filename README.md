@@ -22,7 +22,6 @@ This site [ADD DESCRIPTION]
 - [Structure](#structure-how-does-it-work)
 - [Skeleton](#skeleton-how-is-it-designed)
 - [Surface](#surface-what-does-it-look-like)
-- [Technology Stack](#technology-stack)
 - [Testing](#testing)
 - [Deployment](#deployment)
 - [Credits](#credits)
@@ -44,23 +43,42 @@ This site [ADD DESCRIPTION]
 
 ## Scope (What?)
 
-> `Help Text - to be removed:`  
-> *Goal*: Define what features and functionality your application will provide based on the strategy.
->
-> *Activities*:  
->
-> - List the features, functionality, and content.  
-> - Define what the project will include and what it won't (prioritizing).  
-> - Create user stories and requirements.  
->
-> *Output*: A detailed list of the features, functionalities, and requirements that need to be developed.
+The goal of the scope definition is to clearly outline the features, functionality, and content that will be included in the project. This ensures that the project remains focused on delivering its core objectives while managing expectations. The scope establishes the boundaries of what will be implemented based on the user needs and the strategy laid out. Defining the scope allows the team to prioritize features and set realistic milestones for development.
+
+
+<details>
+<summary><b>Technology Stack</b></summary>
+
+- Frontend
+
+  - **HTML/CSS/JavaScript**: Core technologies for building the structure, styling, and interactivity of the website.
+  - **React.js**: A popular JavaScript library for building dynamic user interfaces, with components that manage state and handle complex UI interactions.
+  - **Tailwind CSS**: A utility-first CSS framework for building custom designs quickly with responsive design out of the box.
+
+- Backend
+
+  - **Node.js**: A JavaScript runtime used on the backend to handle requests and manage user authentication and resource submissions.
+  - **Django REST Framework**: Used for creating RESTful APIs, allowing communication between the frontend and backend services.
+  - **PostgreSQL**: A powerful open-source relational database used to store user accounts, submitted resources, ratings, and comments.
+
+- OAuth
+
+  - **OAuth**: A secure authentication method allowing users to log in using third-party providers such as Google, GitHub, etc.
+
+- Hosting
+
+  - **Frontend Hosting**: Vercel is used to host the React.js frontend, providing fast, global deployment and a seamless development workflow.
+  - **Backend Hosting**: Free-tier hosting solutions (TO BE DECIDED) will be used to host the Node.js/Django backend and PostgreSQL database.
+
+*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+
+</details>
+
 
 <details>
   <summary><strong>User Stories</strong></summary><br>
 
 Please visit our [project Kanban board for details](https://github.com/orgs/ci-companeros/projects/2)
-
-<br>
 
 *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
 
@@ -106,6 +124,17 @@ Please visit our [project Kanban board for details](https://github.com/orgs/ci-c
 
 4. *Community Interaction*:
    - Logged-in users can rate resources and leave comments, creating a feedback loop for which resources are most helpful.
+
+*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+
+</details>
+
+<details>
+  <summary><strong>Prioritization of Features</strong></summary><br>
+
+This section outlines the prioritization of features, identifying the essential ones for the initial launch (MVP - Minimum Viable Product) and which are reserved for future iterations. By prioritizing features based on their importance to both user experience and project goals, this breakdown ensures that the most critical functionality is delivered first, guiding development through an effective and incremental build process while managing expectations.
+
+- Please visit our [project Kanban board for details](https://github.com/orgs/ci-companeros/projects/2) for details on prioritization.
 
 *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
 
@@ -287,58 +316,11 @@ Please visit our [project Kanban board for details](https://github.com/orgs/ci-c
 
 </details>
 
-## Technology Stack
-
-<details>
-<summary><b>Frontend</b></summary>
-
-- **HTML/CSS/JavaScript**: Core technologies for building the structure, styling, and interactivity of the website.
-- **React.js**: A popular JavaScript library for building dynamic user interfaces, with components that manage state and handle complex UI interactions.
-- **Tailwind CSS**: A utility-first CSS framework for building custom designs quickly with responsive design out of the box.
-
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
-
-</details>
-
-<details>
-<summary><b>Backend</b></summary>
-
-- **Node.js**: A JavaScript runtime used on the backend to handle requests and manage user authentication and resource submissions.
-- **Django REST Framework**: Used for creating RESTful APIs, allowing communication between the frontend and backend services.
-- **PostgreSQL**: A powerful open-source relational database used to store user accounts, submitted resources, ratings, and comments.
-
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
-
-</details>
-
-<details>
-<summary><b>OAuth</b></summary>
-
-- **OAuth**: A secure authentication method allowing users to log in using third-party providers such as Google, GitHub, etc.
-
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
-
-</details>
-
-<details>
-<summary><b>Hosting</b></summary>
-
-
-- **Frontend Hosting**: Vercel is used to host the React.js frontend, providing fast, global deployment and a seamless development workflow.
-- **Backend Hosting**: Free-tier hosting solutions (TO BE DECIDED) will be used to host the Node.js/Django backend and PostgreSQL database.
-
-<br>
-
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
-
-</details>
-
-
 ## Testing
 The goal of testing is to ensure that the application functions correctly, delivers a smooth user experience, and performs well across different devices and browsers. Testing helps to identify and fix bugs, validate the design, and ensure that the system meets the defined requirements before deployment. 
 
 <details>
-<summary><b>What we tested:</b></summary>
+<summary><b>What we tested</b></summary>
 <br>
 
 - **Functionality**: Ensured that all features—such as resource submissions, ratings, and comments—work as intended.
@@ -348,7 +330,7 @@ The goal of testing is to ensure that the application functions correctly, deliv
 </details>
 
 <details>
-<summary><b>How we tested:</b></summary>
+<summary><b>How we tested</b></summary>
 <br>
 
 - **Unit Testing**: Each component and function was tested individually to confirm that they perform correctly in isolation.
@@ -362,7 +344,7 @@ The goal of testing is to ensure that the application functions correctly, deliv
 <summary><b>Test report</b></summary>
 <br>
   
-[Test execution result](#)
+- Test execution [result](#)
 
 </details>
 
