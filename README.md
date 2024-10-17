@@ -7,7 +7,7 @@
 </div>
 <br>
 
-This site [ADD DESCRIPTION]
+LazyDog is a collaborative student resource-sharing platform, designed and built by four developers as part of a continued learning project following a bootcamp. The platform allows users to share, rate, and comment on educational resources related to various programming and development topics. Our goal is to create a space for students to access, contribute, and engage with high-quality learning materials while reinforcing what we've learned during the bootcamp.
 
 [Deployed site](#)
 
