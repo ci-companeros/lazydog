@@ -415,11 +415,11 @@ TBD
 
 ## Credits
 
+Special thanks to our all of you who have contributed to our learning journey and the following tools and services used throughout the project.
+
 <details>
 <summary><b>Code Used</b></summary>
-
-Special thanks to our bootcamp mentors and the following tools and services used throughout the project.
-
+  
   - {{RESOURCE_DESCRIPTION}}, created by {{AUTHOR}} and sourced from [{{SOURCE_NAME}}]({{SOURCE_URL}})
 
 *<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
