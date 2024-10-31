@@ -20,7 +20,7 @@
 
 #### Resource Detail Page
 
-![Resource Detail Page](#)
+![Resource Detail Page](./wireframe-img/resource-detail-page.png)
 
 #### Contribution Page
 
@@ -38,6 +38,10 @@
 #### About Detail Page
 
 ![About Detail Page](#)
+
+#### Error Page
+
+![Error Page](./wireframe-img/error-page.png)
 
 </details>
 
