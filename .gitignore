@@ -19,6 +19,10 @@
 #
 # Author: JaqiKal
 
+
+# Sandbox space for any experimental files or components
+playground/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
