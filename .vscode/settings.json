@@ -29,7 +29,9 @@ This file defines your personal VS Code editor settings, such as file exclusions
     "eslint.enable": true,
     "cSpell.words": [
       "arctictern",
+      "callout",
       "Cloudinary",
+      "colour",
       "eventyret",
       "formulahendry",
       "hookyqr",
