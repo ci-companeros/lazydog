@@ -19,6 +19,12 @@
 #
 # Author: JaqiKal
 
+# Markdown sandbox
+markdown-to-be-ignored/
+
+# Sandbox space for any experimental files or components
+playground/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
