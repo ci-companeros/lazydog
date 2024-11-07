@@ -1,0 +1,245 @@
+/* CSS File: styles.css */
+
+/* Global Reset to Ensure Consistent Styling Across Browsers */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+  /* Base font size for easier scaling */
+}
+
+body {
+  padding: 2rem;
+  line-height: 1.6;
+  font-family: Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-light);
+  color: #000000;
+}
+
+[data-theme="dark"] body {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --gradient-light-dark: radial-gradient(100% 100% at 100% 0%, #f6f9fc 0%, #101019 100%);
+  /* Define CSS Variables for Themes */
+  --background-light: #f6f9fc;
+  --text-light: #0d1117;
+  --primary-light: #77bdfb;
+  --secondary-light: #fa7970;
+  --accent-light-1: #a2d2fb;
+  /* Light Sky Blue - Light Theme */
+  --accent-light-2: #cea5fb;
+  /* Mauve - Light Theme */
+  --success-light: #7ce38b;
+  --callout-light: #f6d365;
+  --warning-light: #faa356;
+  --background-dark: #101019;
+  --text-dark: #e1e4e8;
+  --primary-dark: #77bdfb;
+  --secondary-dark: #fa7970;
+  --accent-dark-1: #a2d2fb;
+  --accent-dark-2: #cea5fb;
+  /* Mauve - Dark Theme */
+  --success-dark: #7ce38b;
+  --callout-dark: #f6d365;
+  --warning-dark: #faa356;
+}
+
+.button-primary {
+  background-color: var(--primary-light);
+  color: #000000;
+  border: none;
+  padding: 0.625rem 0.625rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 0.3em;
+  margin: 0.625rem 0;
+}
+
+[data-theme="dark"] .button-primary {
+  background-color: var(--accent-dark-2);
+  color: #000000;
+}
+
+.button-secondary {
+  background: var(--gradient-light-dark);
+  font-size: 1.125rem;
+  display: inline-block;
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  will-change: box-shadow, transform;
+  box-shadow: 0px 0.01em 0.01em rgb(45 35 66 / 40%), 0px 0.3em 0.7em -0.01em rgb(45 35 66 / 30%), inset 0px -0.01em 0px rgb(58 65 111 / 50%);
+  padding: 0.625rem;
+  border-radius: 0.3em;
+  color: #fff;
+  height: 2.6rem;
+  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+  margin: 0.625rem 0;
+}
+
+.button-secondary:hover {
+  box-shadow: 0px 0.1em 0.2em rgb(45 35 66 / 40%), 0px 0.4em 0.7em -0.1em rgb(45 35 66 / 30%), inset 0px -0.1em 0px #3c4fe0;
+  transform: translateY(-0.1em);
+}
+
+.button-secondary:active {
+  box-shadow: inset 0px 0.1em 0.6em #3c4fe0;
+  transform: translateY(0em);
+}
+
+.link-accent {
+  color: var(--accent-light-1);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+[data-theme="dark"] .link-accent {
+  color: var(--accent-dark-1);
+}
+
+.link-accent:hover {
+  text-decoration: underline;
+}
+
+.example-box {
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  border: 1px solid var(--accent-light-1);
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+[data-theme="dark"] .example-box {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+  border-color: var(--accent-dark-1);
+}
+
+.callout {
+  background-color: var(--callout-light);
+  color: #000000;
+  padding: 0.9375rem;
+  border-left: 4px solid var(--secondary-light);
+  margin: 1.25rem 0;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+[data-theme="dark"] .callout {
+  background-color: var(--callout-dark);
+  border-color: var(--secondary-dark);
+}
+
+.success-message {
+  background-color: var(--success-light);
+  color: #000000;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+  margin: 1.25rem 0;
+  transition: background-color 0.3s;
+}
+
+[data-theme="dark"] .success-message {
+  background-color: var(--success-dark);
+}
+
+.warning-message {
+  background-color: var(--warning-light);
+  color: #000000;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+  margin: 1.25rem 0;
+  transition: background-color 0.3s;
+}
+
+[data-theme="dark"] .warning-message {
+  background-color: var(--warning-dark);
+}
+
+.card {
+  background-color: var(--accent-light-2);
+  color: #000000;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+  margin-bottom: 1.25rem;
+}
+
+[data-theme="dark"] .card {
+  background-color: var(--accent-dark-2);
+  box-shadow: 0 0.25rem 0.5rem rgba(255, 255, 255, 0.5);
+}
+
+.card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  transform: translateY(-0.3125rem);
+}
+
+.error-message {
+  background-color: var(--secondary-light);
+  color: #000000;
+  padding: 0.625rem;
+  border-radius: 0.25rem;
+  margin: 1.25rem 0;
+  border: 1px solid var(--secondary-light);
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+[data-theme="dark"] .error-message {
+  background-color: var(--secondary-dark);
+  border-color: var(--secondary-dark);
+}
+
+.divider {
+  height: 1rem;
+  margin: 2rem 0;
+  background: linear-gradient(to right, var(--primary-light), var(--secondary-light), var(--accent-light-1), var(--accent-light-2), var(--success-light), var(--warning-light), #1a1a1a, #333);
+}
+
+[data-theme="dark"] .divider {
+  background: linear-gradient(to right, var(--primary-dark), var(--secondary-dark), var(--accent-dark-1), var(--accent-dark-2), var(--success-dark), var(--warning-dark), #aaa, #666);
+}
+
+/* Center content only for larger screens */
+@media (min-width: 768px) {
+  body {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
