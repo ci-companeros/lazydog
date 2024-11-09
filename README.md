@@ -2,17 +2,16 @@
 
 <!-- markdownlint-disable MD033 -->
 
-<img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" width="30%">
-<img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" width="30%">
-<img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" width="30%">
-
-
+<div style="display: flex; justify-content: space-around;">
+  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
+  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
+  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
+</div>
+<br>
 
 LazyDog is a collaborative student resource-sharing platform, designed and built by four developers as part of a continued learning project following a bootcamp. The platform allows users to share, rate, and comment on educational resources related to various programming and development topics. Our goal is to create a space for students to access, contribute, and engage with high-quality learning materials while reinforcing what we've learned during the bootcamp.
 
 [Deployed site](https://example.com)
-
----
 
 ## Content
 
@@ -35,7 +34,6 @@ LazyDog was built to address the challenge of finding high-quality, categorized 
 ## Scope (What?)
 
 This section outlines the core functionality of the platform, the features planned for the MVP (Minimum Viable Product), and the technologies used. The goal was to focus on essential features for resource submission, searchability, and community feedback while allowing for future scalability.
-
 
 <details>
 <summary><b>Technology Stack</b></summary>
@@ -135,7 +133,7 @@ This section outlines the prioritization of features, identifying the essential 
 
 ## Structure (How does it work?)
 
-The platform includes key features such as user authentication, resource categorization, and search functionality, all of which enhance user interaction with educational content. Logged-in users can contribute resources, rate them, and leave comments, creating an interactive feedback loop that highlights the most useful resources. 
+The platform includes key features such as user authentication, resource categorization, and search functionality, all of which enhance user interaction with educational content. Logged-in users can contribute resources, rate them, and leave comments, creating an interactive feedback loop that highlights the most useful resources.
 
 This section provides an overview of the platform’s structure, including user workflows, visual layout (wireframes), and database design (ERD), which together guide the user experience and data flow throughout the application.
 
@@ -190,7 +188,6 @@ This section provides an overview of the platform’s structure, including user 
 
 **[Back to Contents](#content)**
 
-
 </details>
 
 <details>
@@ -221,7 +218,6 @@ The ERD illustrates the structure of the database and the relationships between 
 </details><br>
 
 **[Back to Contents](#content)**
-
 
 ## Skeleton (How is it designed?)
 
@@ -263,7 +259,6 @@ This section focuses on the detailed design of individual components within the 
 
 **[Back to Contents](#content)**
 
-
 </details><br>
 
 **[Back to Contents](#content)**
@@ -274,15 +269,16 @@ The platform has a modern design with a focus on usability and accessibility. Th
 
 <details>
 <summary><b>Color scheme</b></summary><br>
+
+### Dark palette
   
-*Placeholder palette- to be removed*
+![x](docs/ella/designs/color-fonts/color/ld-dark-palette.png)
 
-[...  Add RATIONALE to the palette ...]
+### Bright palette
 
-![Placeholder palette - to be removed](./docs/readme-img/placeholder%20palette%20-%20to%20be%20removed.webp)
+![X](docs/ella/designs/color-fonts/color/ld-dark-palette.png)
 
 **[Back to Contents](#content)**
-
 
 </details>
 
@@ -290,7 +286,6 @@ The platform has a modern design with a focus on usability and accessibility. Th
 <summary><b>Typography</b></summary><br>
 
 **[Back to Contents](#content)**
-
 
 </details>
 
@@ -333,7 +328,8 @@ The platform has a modern design with a focus on usability and accessibility. Th
 **[Back to Contents](#content)**
 
 ## Testing
-The goal of testing is to ensure that the application functions correctly, delivers a smooth user experience, and performs well across different devices and browsers. Testing helps to identify and fix bugs, validate the design, and ensure that the system meets the defined requirements before deployment. 
+
+The goal of testing is to ensure that the application functions correctly, delivers a smooth user experience, and performs well across different devices and browsers. Testing helps to identify and fix bugs, validate the design, and ensure that the system meets the defined requirements before deployment.
 
 The project underwent rigorous testing to ensure the functionality works as intended, with special focus on usability and performance across devices. Manual and automated tests were conducted to confirm that the app functions smoothly in various scenarios.
 
@@ -362,11 +358,9 @@ The project underwent rigorous testing to ensure the functionality works as inte
 <summary><b>Test report</b></summary>
 <br>
   
-- Test execution [result](#)
+- Test execution [result](https://www.example.com)  OBS Ändra länken!
 
 </details><br>
-
-
 
 **[Back to Contents](#content)**
 
@@ -398,10 +392,9 @@ Special thanks to our all of you who have contributed to our learning journey an
 <details>
 <summary><b>Code Used</b></summary>
   
-  - {{RESOURCE_DESCRIPTION}}, created by {{AUTHOR}} and sourced from [{{SOURCE_NAME}}]({{SOURCE_URL}})
+- {{RESOURCE_DESCRIPTION}}, created by {{AUTHOR}} and sourced from [{{SOURCE_NAME}}]({{SOURCE_URL}})
 
 **[Back to Contents](#content)**
-
 
 </details>
 
@@ -413,7 +406,6 @@ Special thanks to our all of you who have contributed to our learning journey an
 </details><br>
 
 **[Back to Contents](#content)**
-
 
 ---
 
