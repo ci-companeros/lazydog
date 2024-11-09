@@ -1,18 +1,18 @@
 # LazyDog - Student Resource Platform
 
-<div style="display: flex; justify-content: space-around;">
-  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
-  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
-  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
-</div>
-<br>
+<!-- markdownlint-disable MD033 -->
+
+<img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" width="30%">
+<img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" width="30%">
+<img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" width="30%">
+
+
 
 LazyDog is a collaborative student resource-sharing platform, designed and built by four developers as part of a continued learning project following a bootcamp. The platform allows users to share, rate, and comment on educational resources related to various programming and development topics. Our goal is to create a space for students to access, contribute, and engage with high-quality learning materials while reinforcing what we've learned during the bootcamp.
 
-[Deployed site](#)
+[Deployed site](https://example.com)
 
 ---
-<a id="table-of-contents"></a>
 
 ## Content
 
@@ -30,11 +30,12 @@ LazyDog is a collaborative student resource-sharing platform, designed and built
 
 LazyDog was built to address the challenge of finding high-quality, categorized educational resources in one place. It is aimed at students and developers looking to discover or contribute valuable content, with features that encourage community engagement through ratings and comments. The platform helps users enhance their learning journey and share insights from a range of development topics.
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
 
 ## Scope (What?)
 
 This section outlines the core functionality of the platform, the features planned for the MVP (Minimum Viable Product), and the technologies used. The goal was to focus on essential features for resource submission, searchability, and community feedback while allowing for future scalability.
+
 
 <details>
 <summary><b>Technology Stack</b></summary>
@@ -60,17 +61,17 @@ This section outlines the core functionality of the platform, the features plann
   - **Frontend Hosting**: Vercel is used to host the React.js frontend, providing fast, global deployment and a seamless development workflow.
   - **Backend Hosting**: Free-tier hosting solutions (TO BE DECIDED) will be used to host the Node.js/Django backend and PostgreSQL database.
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
 
 </details>
 
-
 <details>
+
   <summary><strong>User Stories</strong></summary><br>
 
 Please visit our [project Kanban board for details](https://github.com/orgs/ci-companeros/projects/2)
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
 
 </details>
 
@@ -115,7 +116,7 @@ Please visit our [project Kanban board for details](https://github.com/orgs/ci-c
 4. *Community Interaction*:
    - Logged-in users can rate resources and leave comments, creating a feedback loop for which resources are most helpful.
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
 
 </details>
 
@@ -126,9 +127,11 @@ This section outlines the prioritization of features, identifying the essential 
 
 - Please visit our [project Kanban board for details](https://github.com/orgs/ci-companeros/projects/2) for details on prioritization.
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
 
-</details>
+</details><br>
+
+**[Back to Contents](#content)**
 
 ## Structure (How does it work?)
 
@@ -185,7 +188,8 @@ This section provides an overview of the platform’s structure, including user 
    - *Analytics*:
      - Track which resources are most popular, user engagement, etc.
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
+
 
 </details>
 
@@ -214,9 +218,9 @@ The ERD illustrates the structure of the database and the relationships between 
 
 ![ERD](#path_to_erd_image)
 
-</details>
+</details><br>
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
 
 
 ## Skeleton (How is it designed?)
@@ -257,9 +261,12 @@ This section focuses on the detailed design of individual components within the 
    - For moderation and analytics, admins can manage submitted resources, review flagged content, and track engagement.
      i.e. Admins can see a queue of newly submitted resources for approval, option to manage user accounts, if needed.
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
 
-</details>
+
+</details><br>
+
+**[Back to Contents](#content)**
 
 ## Surface (What does it look like?)
 
@@ -274,21 +281,23 @@ The platform has a modern design with a focus on usability and accessibility. Th
 
 ![Placeholder palette - to be removed](./docs/readme-img/placeholder%20palette%20-%20to%20be%20removed.webp)
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
+
 
 </details>
 
 <details>
 <summary><b>Typography</b></summary><br>
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
+
 
 </details>
 
 <details>
 <summary><b>Imagery</b></summary><br>
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
 
 </details>
 
@@ -319,9 +328,9 @@ The platform has a modern design with a focus on usability and accessibility. Th
 - [Wave](https://wave.webaim.org) is a suite of evaluation tools that helps authors make their web content more accessible to individuals with disabilities.
 - [Web Disability Sim](https://chromewebstore.google.com/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) is a google chrome extension that allows you to view your site as people with accessibility needs would see it.
 
-</details>
+</details><br>
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
 
 ## Testing
 The goal of testing is to ensure that the application functions correctly, delivers a smooth user experience, and performs well across different devices and browsers. Testing helps to identify and fix bugs, validate the design, and ensure that the system meets the defined requirements before deployment. 
@@ -355,10 +364,11 @@ The project underwent rigorous testing to ensure the functionality works as inte
   
 - Test execution [result](#)
 
-</details>
+</details><br>
 
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+
+**[Back to Contents](#content)**
 
 ## Deployment
 
@@ -379,7 +389,7 @@ TBD
 
 <br>
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
 
 ## Credits
 
@@ -390,7 +400,8 @@ Special thanks to our all of you who have contributed to our learning journey an
   
   - {{RESOURCE_DESCRIPTION}}, created by {{AUTHOR}} and sourced from [{{SOURCE_NAME}}]({{SOURCE_URL}})
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
+
 
 </details>
 
@@ -399,13 +410,12 @@ Special thanks to our all of you who have contributed to our learning journey an
 
 - Special thanks to any tutorials, courses, or communities that helped with this project.
 
-</details>
+</details><br>
 
-*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+**[Back to Contents](#content)**
 
 
 ---
 
 *Written by [EVondrus](https://github.com/EVondrus), [JaqiKal](https://github.com/JaqiKal), [NiclO1337](https://github.com/NiclO1337) & [JorgenDIF](https://github.com/JorgenDIF)*
- 
- 
+<!-- markdownlint-enable MD033 -->
