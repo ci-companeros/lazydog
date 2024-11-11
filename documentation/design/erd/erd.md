@@ -12,7 +12,7 @@
 ### User model
 
 | Attribute   | Type                   | Description                                 |
-|-------------|------------------ -----|---------------------------------------------|
+|-------------|------------------------|---------------------------------------------|
 | user_id     | IntegerField (PK)      | Primary Key                                 |
 | username    | CharField (unique)     | Unique Username                             |
 | password    | CharField              | User Password                               |
