@@ -186,7 +186,9 @@ For more information please refer to [design documentation about wireframes](/do
   
 The ERD illustrates the structure of the database and the relationships between entities, such as users, resources, ratings, and comments.
 
-![ERD](#path_to_erd_image)
+[ERD](/documentation/design/erd/erd.md)
+
+![ERD](/documentation/design/erd/erd-jk.webp)
 
 </details>
 <br>
