@@ -16,12 +16,12 @@
 
 *LazyDog* is a collaborative student resource-sharing platform, designed and built by four developers as part of a continued learning project following a bootcamp. The platform allows users to share, rate, and comment on educational resources related to various programming and development topics. Our goal is to create a space for students to access, contribute, and engage with high-quality learning materials while reinforcing what we've learned during the bootcamp.
 
-🚨 🚨 🚨 <span style="color: red;">***<a href="https://www.example.com" target="_blank">Live Demo</a>*** OBS FIxa länken!</span>
+<span style="color: red;">***<a href="https://www.example.com" target="_blank">Live Demo</a>*** OBS FIxa länken!</span> 🚨 🚨 🚨
 
-## Contents
+## Content
 
 - [Overview](#overview)
-- [Features](#features)   🚨
+- [Core Features](#core-features)
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [Design Details](#design-details)
@@ -37,6 +37,7 @@
 *LazyDog* was built to address the challenge of finding high-quality, categorized educational resources in one place. It is aimed at students and developers looking to discover or contribute valuable content, with features that encourage community engagement through ratings and comments. The platform helps users enhance their learning journey and share insights from a range of development topics.
 
 ## Core Features
+
 
 This section outlines the core functionality of the platform and the key features planned for the Minimum Viable Product (MVP).
 
@@ -162,6 +163,8 @@ This section outlines the core functionality of the platform and the key feature
 
 For more details on features and to view the user stories, visit our [Kanban board](https://github.com/orgs/ci-companeros/projects/2).
 
+**[⬆️Back to Content](#content)**
+
 ## Technologies
 
 - **Frontend**:  
@@ -171,13 +174,15 @@ For more details on features and to view the user stories, visit our [Kanban boa
 - **Database**:  
   - PostgreSQL
 - **Deployment**:  
-  - [Relevant services](https://example.com)
+  - [Relevant services](https://example.com)🚨 <span style="color: red;">***OBS FIxa länken!***</span>
+
+**[⬆️Back to Content](#content)**
 
 ## Agile Development Process
 
 ### Our Agile Approach
 
-- The development of *LazyDog* is guided by Agile principles, emphasizing flexibility, continuous improvement, and rapid adaptation to change. While not strictly adhering to traditional Agile practices such as scheduled sprints or scrums, the development process is inspired by Agile methodologies.
+The development of *LazyDog* is guided by Agile principles, emphasizing flexibility, continuous improvement, and rapid adaptation to change. While not strictly adhering to traditional Agile practices such as scheduled sprints or scrums, the development process is inspired by Agile methodologies.
 
 <details>
 <summary><b>Read more</b></summary>
@@ -200,11 +205,13 @@ For more details on features and to view the user stories, visit our [Kanban boa
 - This method helps ensure that essential features are completed first, optimizing resource allocation and effectively guiding the project's development priorities.
 
 For more details, please follow this link to our [GitHub Kanban board](https://github.com/orgs/ci-companeros/projects/2).
-</details>
+</details><br>
+
+**[⬆️Back to Content](#content)**
 
 ## Installation
 
-To set up the project locally, follow these steps:
+<details><summary>To set up the project locally, follow these steps:</summary><br>
 
 1. Clone the Repository:
 
@@ -242,89 +249,59 @@ To set up the project locally, follow these steps:
     npm start
     ```
 
+</details><br>
+
+**[⬆️Back to Content](#content)**
+
 ## Usage
 
 For detailed instructions on using the LazyDog platform, refer to the [Usage Guide.](documentation/guidelines/usage-guide.md)
+
+**[⬆️Back to Content](#content)**
 
 ## Design Details
 
 This section provides an overview of the core design elements for the platform, with links to detailed documents.
 
-### Development Framework - 5 Planes of Web Development
+<details><summary><span>Development Framework - 5 Planes of Web Development</span></summary>
 
 Our design and development process follows the **5 Planes of Web Development**: **Strategy, Scope, Structure, Skeleton, and Surface**. This framework guides our approach to ensure a user-centered design.
 
-- **[Design Document - 5 Planes Framework](documentation/design/5-planes/x)**  🚨 <span style="color: red;">***OBS FIxa länken!***</span>
-
-### Frontend Design
-
-- **[Design Document - Color Schemes](documentation/design/color-scheme/)**
-- **[Design Document - Typography](documentation/design/typography/)**
-- **[Design Document - Wireframes](documentation/design/wireframes/)** (Figma design?) 🚨 🚨 🚨
-- **[Design Document - UI Components](documentation/design/UI-components/)**
-
-### Backend Design
-
-- **[Design Document - Entity Relationship Diagram (ERD)](documentation/design/erd/erd-jk.webp)**
-
-<details>
-<summary><i>ERD relationships explained</i></summary>
-
-#### User - Resource
-
-- Cardinality: One (User) to Many (Resources)
-- Description: A user can submit many resources, but each resource is submitted by one and only one user.
-
-#### User - Comment
-
-- Cardinality: One (User) to Many (Comments)
-- Description: A user can write many comments, but each comment is written by one and only one user.
-
-#### Resource - Comment
-
-- Cardinality: One (Resource) to Many (Comments)
-- Description: A resource can have many comments, but each comment is associated with one and only one resource.
-
-#### Resource - Rating
-
-- Cardinality: One (Resource) to Many (Ratings)
-- Description: A resource can have many ratings, but each rating belongs to one and only one resource.
-
-#### User - Rating
-
-- Cardinality: One (User) to Many (Ratings)
-- Description: A user can give many ratings, but each rating is provided by one and only one user.
-
-#### Category - Resource
-
-- Cardinality: One (Category) to Many (Resources)
-- Description: A category can include many resources, but each resource belongs to one and only one category.
-
-#### Resource - Tag (via Resource_Tag)
-
-- Cardinality: Many (Resources) to Many (Tags)
-- Description: A resource can have many tags, and a tag can be associated with many resources.
-
-#### Resource_Tag (Join Table)
-
-Cardinalities:
-
-- Resource_Tag is linked to one and only one resource.
-- Resource_Tag is linked to one and only one tag.
+➡️ **[Design Document - 5 Planes Framework](documentation/design/5-planes/five-planes.md)**
 
 </details>
 
-### Workflow & Processes
+<details><summary><span>Frontend Design</span></summary>
+
+➡️ **[Design Document - Color Schemes](documentation/design/color-scheme/)**<br>
+➡️ **[Design Document - Typography](documentation/design/typography/)**<br>
+➡️ **[Design Document - Wireframes](documentation/design/wireframes/)** (Figma design? 🚨🚨🚨) <br>
+➡️ **[Design Document - UI Components](documentation/design/UI-components/)**
+
+</details>
+
+<details><summary><span>Backend Design</span></summary>
+
+➡️ **[Design Document - Entity Relationship Diagram](documentation/design/erd/erd-jk.webp)**<br>
+➡️ **[ERD relationships explained](documentation/design/erd/erd-relationship.md)**
+
+</details>
+
+<details><summary><span>Workflow & Processes</span></summary>
 
 This section covers both frontend user interactions and backend processes, detailing how data flows through the platform.
 
-- **[Design Document - Workflow](documentation/design/flow/)**
+➡️ **[Design Document - Workflow](documentation/design/flow/)**
 
-### User Experience
+</details>
 
-- **[Design Document - Wireframes](documentation/design/wireframes/)**
+<details><summary><span>User Experience</span></summary>
 
-#### Defensive Design
+➡️ **[Design Document - Wireframes](documentation/design/wireframes/)**
+
+</details>
+
+<details><summary><span>Defensive Design</span></summary>
 
 Defensive design ensures a smooth user experience by providing clear feedback during user interactions.
 
@@ -337,6 +314,10 @@ Defensive design ensures a smooth user experience by providing clear feedback du
   If an action fails due to invalid data or other issues, users get specific, actionable error messages to guide them.
 
   ![Error message]()
+
+</details><br>
+
+**[⬆️Back to Content](#content)**
 
 ## Testing
 
@@ -361,18 +342,21 @@ Testing is integral to ensuring the application operates as intended. Comprehens
 - **Cross-Browser and Device Testing**: We ensured the platform works smoothly on different browsers (Chrome, Firefox, Safari) and across multiple screen sizes (mobile, tablet, desktop).
 - **Code Validation**: The code was checked for errors, optimized, and debugged for performance improvements.
 
-</details>
+</details><br>
+
+**[⬆️Back to Content](#content)**
 
 ## Contributing
 
 **Contributions are welcome!**
 
-Please review the [Contributing Guidelines](documentation/guidelines/contribution-guide.md) for more information on how to get involved.
-🚨 <span style="color: red;">***OBS Är det rätt doc länkat? ***</span>
+Please review the [Contributing Guidelines](documentation/guidelines/contribution-guide.md) for more information on how to get involved. 🚨 <span style="color: red;">***OBS FIxa länken!***</span>
 
 ## Deployment
 
 Detailed instructions for deploying the application can be found in the [Deployment Guide.](documentation/guidelines/CONTRIBUTION.md)
+
+**[⬆️Back to Content](#content)**
 
 ## Credits
 
@@ -381,19 +365,18 @@ A heartfelt thank you to everyone who contributed to our learning journey. We al
 <details>
 <summary><b>Code Used</b></summary>
   
-  - {{RESOURCE_DESCRIPTION}}, created by {{AUTHOR}} and sourced from [{{SOURCE_NAME}}]({{SOURCE_URL}})
+- {{RESOURCE_DESCRIPTION}}, created by {{AUTHOR}} and sourced from [{{SOURCE_NAME}}]({{SOURCE_URL}})
 
 </details>
 
 <details>
 <summary><b>Acknowledgements</b></summary>
 
-- Special thanks to any tutorials, courses, or communities that helped with this project.
+We would like to give special thanks to the tutorials, courses, and communities that provided invaluable guidance and support throughout the development of this project.
 
 </details><br>
 
-**[Back to Contents](#content)**
-
+**[⬆️Back to Content](#content)**
 
 ## License
 
@@ -401,4 +384,6 @@ This project is licensed under the MIT License. See the [LICENSE](C:\Users\ellav
 
 ---
 <br>*Readme authors: [EVondrus](https://github.com/EVondrus), [JaqiKal](https://github.com/JaqiKal), [NiclO1337](https://github.com/NiclO1337) & [JorgenDIF](https://github.com/JorgenDIF)*
+
+**[⬆️Back to Content](#content)**
 <!-- markdownlint-enable MD033 -->
