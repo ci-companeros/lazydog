@@ -1,4 +1,4 @@
-# LazyDog - Student Resource Platform
+# LazyDog - Your Code Compass
 
 ![GitHub contributors](https://img.shields.io/github/contributors/ci-companeros/lazydog?color=blue)  <!-- Blue for contributors -->
 ![GitHub last commit](https://img.shields.io/github/last-commit/ci-companeros/lazydog?color=brightgreen)  <!-- Green for activity -->
@@ -8,345 +8,312 @@
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/ci-companeros/lazydog?color=purple)  <!-- Purple for PRs -->
 ![GitHub repo size](https://img.shields.io/github/repo-size/ci-companeros/lazydog?color=black)  <!-- Gray for repo size -->
 
-<!-- markdownlint-disable MD033 -->
 
-<div style="display: flex; justify-content: space-around;">
-  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
-  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
-  <img src="./docs/readme-img/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
-</div>
-<br>
+*LazyDog* is a collaborative student resource-sharing platform, designed and built by four developers as part of a continued learning project following a bootcamp. The platform allows users to share, rate, and comment on educational resources related to various programming and development topics. Our goal is to create a space for students to access, contribute, and engage with high-quality learning materials while reinforcing what we've learned during the bootcamp.
 
-LazyDog is a collaborative student resource-sharing platform, designed and built by four developers as part of a continued learning project following a bootcamp. The platform allows users to share, rate, and comment on educational resources related to various programming and development topics. Our goal is to create a space for students to access, contribute, and engage with high-quality learning materials while reinforcing what we've learned during the bootcamp.
+### [Live Demo](#) <!-- Link to your deployed site -->
 
-[Deployed site](https://example.com)
+---
 
-## Content
-
-- [LazyDog - Student Resource Platform](#lazydog---student-resource-platform)
-- [Strategy](#strategy-why)
-- [Scope](#scope-what)
-- [Structure](#structure-how-does-it-work)
-- [Skeleton](#skeleton-how-is-it-designed)
-- [Surface](#surface-what-does-it-look-like)
+## Table of Contents
+- [Overview](#overview)
+- [Features](#features)
+- [Technologies](#technologies)
+- [Installation](#installation)
+- [Design Details](#design-details)
+- [Usage](#usage)
 - [Testing](#testing)
+- [Contributing](#contributing)
 - [Deployment](#deployment)
 - [Credits](#credits)
+- [License](#license)
 
-## Strategy (Why?)
+---
 
-LazyDog was built to address the challenge of finding high-quality, categorized educational resources in one place. It is aimed at students and developers looking to discover or contribute valuable content, with features that encourage community engagement through ratings and comments. The platform helps users enhance their learning journey and share insights from a range of development topics.
+## Overview
+*LazyDog* was built to address the challenge of finding high-quality, categorized educational resources in one place. It is aimed at students and developers looking to discover or contribute valuable content, with features that encourage community engagement through ratings and comments. The platform helps users enhance their learning journey and share insights from a range of development topics.
 
-**[Back to Contents](#content)**
+---
 
-## Scope (What?)
+## Core Features
+This section outlines the core functionality of the platform and the key features planned for the Minimum Viable Product (MVP).
 
-This section outlines the core functionality of the platform, the features planned for the MVP (Minimum Viable Product), and the technologies used. The goal was to focus on essential features for resource submission, searchability, and community feedback while allowing for future scalability.
+1. **User Accounts**:
+   - Users can create an account with a username, email, and password.
+   - Logged-in users can submit resources, rate resources, and participate in discussions by leaving comments.
 
-<details>
-<summary><b>Technology Stack</b></summary>
+      <details>
+      <summary><b>Screenshots</b></summary>
+      
+      ![Signup Page]()
 
-- Frontend
+      ![Login Page]()
 
-  - **HTML/CSS/JavaScript**: Core technologies for building the structure, styling, and interactivity of the website.
-  - **React.js**: A popular JavaScript library for building dynamic user interfaces, with components that manage state and handle complex UI interactions.
-  - **Tailwind CSS**: A utility-first CSS framework for building custom designs quickly with responsive design out of the box.
+      </details>
 
-- Backend
+2. **Resource Categorization**:
+   - Resources are organized into categories like programming languages, frameworks, and tools.
+   - Each category includes subcategories with various types of resources, such as documentation, articles, YouTube tutorials, and games.  
+   
+   Example of categorized resources:
+     - **Project 1 - Introduction to Web Dev**: HTML, CSS  
+       Subcategories: Docs, Articles, YouTube, Games.
+     - **Project 2 - JavaScript Fundamentals**: JavaScript  
+       Subcategories: Docs, Articles, YouTube, Games.
+     - **Project 3 - Python Basics**: Python  
+       Subcategories: Docs, Articles, YouTube, Games.
 
-  - **Node.js**: A JavaScript runtime used on the backend to handle requests and manage user authentication and resource submissions.
-  - **Django REST Framework**: Used for creating RESTful APIs, allowing communication between the frontend and backend services.
-  - **PostgreSQL**: A powerful open-source relational database used to store user accounts, submitted resources, ratings, and comments.
+        <details>
+        <summary><b>Screenshots</b></summary>
+        
+        ![Resource Page]()
 
-- OAuth
+        </details>
 
-  - **OAuth**: A secure authentication method allowing users to log in using third-party providers such as Google, GitHub, etc.
 
-- Hosting
+3. **Resource Submission**:
+   - Logged-in users can contribute by submitting new resources through a simple form.
+   - The submission includes fields for a URL, title, short description, optional image, category, and tags to ensure proper categorization and relevance.
 
-  - **Frontend Hosting**: Vercel is used to host the React.js frontend, providing fast, global deployment and a seamless development workflow.
-  - **Backend Hosting**: Free-tier hosting solutions (TO BE DECIDED) will be used to host the Node.js/Django backend and PostgreSQL database.
+      <details>
+      <summary><b>Screenshots</b></summary>
+      
+      ![Contribution Page]()
 
-**[Back to Contents](#content)**
+      </details>
 
-</details>
+4. **Rating & Commenting System**:
+   - Users can rate resources on a 1-5 star scale.
+   - The platform displays the average rating and the total number of ratings for each resource.
+   - Users can leave comments to discuss resources, provide feedback, or ask questions.
 
-<details>
+      <details>
+      <summary><b>Screenshots</b></summary>
+      
+      ![Rating Feature]()
 
-  <summary><strong>User Stories</strong></summary><br>
+      ![Comment Feature]()
 
-Please visit our [project Kanban board for details](https://github.com/orgs/ci-companeros/projects/2)
+      </details>
 
-**[Back to Contents](#content)**
+5. **User Dashboard**:
+   - Logged-in users have access to a personal dashboard where they can:
+     - View and manage their submitted resources.
+     - See their previous comments and ratings.
+     - Delete their account and associated data if they choose.
 
-</details>
+      <details>
+      <summary><b>Screenshots</b></summary>
+      
+      ![User Dashboard]()
 
-<details>
-  <summary><strong>Summary of Core Features</strong></summary>
+      </details>
 
-1. *User Accounts*:
+6. **Community Interaction**:
+   - Resources are rated and commented on by the community, allowing users to engage with and improve the platform.
+   - The number of comments and the average rating help users identify the most valuable resources.
 
-   - Users sign up with a username and password.
-   - Logged-in users gain access to additional features, such as submitting resources, rating, and commenting.
+      <details>
+      <summary><b>Screenshots</b></summary>
+      
+      ![Resource Detail Page]()
 
-2. *Categorized Resource Listings*:
+      ![Comment Section]()
 
-   - Resources are divided into categories (e.g., programming languages, frameworks, tools, etc.) and are fully searchable.
+      </details>
 
-   1. **Project 1 - Introduction to Web dev**
-      - Tech covered: HTML, CSS
-      - Subcategories:
-        - HTML: Docs, articles, YouTube, games
-        - CSS: Docs, articles, YouTube, games
-   2. **Project 2 - Javascript fundamentals**
-      - Tech covered: Javascript
-      - Subcategories:
-        - Docs, articles, YouTube, games
-   3. **Project 3 - Python Basics**
-      - Tech covered: Python
-      - Subcategories:
-        - Docs, articles, YouTube, games
-   4. **Project 4 - Frameworks & Databases**
-      - Tech covered: Django, PostgresSQL
-      - Subcategories:
-        - Docs, articles, YouTube, games
-   5. **Project 5 - Specializations**
-      - Tech covered: Advanced Frontend, Predictive Analytics, E-commerce
-      - Subcategories:
-        - Docs, articles, YouTube, games
+7. **Flagging Feature**:
+   - Users can flag inappropriate or harmful content, ensuring the platform remains a safe and respectful space.
+   - Admins review flagged resources or comments and take action when necessary (e.g., removing or moderating content).
+      <details>
+      <summary><b>Screenshots</b></summary>
+      
+      ![Flagging feature]()
 
-3. *Resource Submission Form*:
-   - Users can submit URLs along with a short description, stating why the resource is useful and what it’s for.
-   - Users must choose a category for the resource.
+      ![Flagging feature - Admin Dashboard]()
 
-4. *Community Interaction*:
-   - Logged-in users can rate resources and leave comments, creating a feedback loop for which resources are most helpful.
+      </details>
 
-**[Back to Contents](#content)**
+8. **Responsive Design**:
+   - The platform is fully optimized for both desktop and mobile devices, ensuring a seamless experience across all screen sizes.
+      <details>
+      <summary><b>Screenshots</b></summary>
+      
+      ![Large Screen]()
 
-</details>
+      ![Small Screen]()
 
-<details>
-  <summary><strong>Prioritization of Features</strong></summary><br>
+      </details>
 
-This section outlines the prioritization of features, identifying the essential ones for the initial launch (MVP - Minimum Viable Product) and which are reserved for future iterations. By prioritizing features based on their importance to both user experience and project goals, this breakdown ensures that the most critical functionality is delivered first, guiding development through an effective and incremental build process while managing expectations.
+9. **Modern UI/UX**:
+   - A clean, modern interface with accessible design features to ensure ease of use for all users, regardless of their abilities or preferences of dark or light mode. See further accecability details in the [Testing documentation.](./TESTING.md)
 
-- Please visit our [project Kanban board for details](https://github.com/orgs/ci-companeros/projects/2) for details on prioritization.
+      <details>
+      <summary><b>Screenshots</b></summary>
+      
+      ![Light Mode]()
 
-**[Back to Contents](#content)**
+      ![Dark Mode]()
 
-</details><br>
+      </details>
 
-**[Back to Contents](#content)**
+For more details on features and to view the user stories, visit our [Kanban board](#).
 
-## Structure (How does it work?)
 
-The platform includes key features such as user authentication, resource categorization, and search functionality, all of which enhance user interaction with educational content. Logged-in users can contribute resources, rate them, and leave comments, creating an interactive feedback loop that highlights the most useful resources.
+---
 
-This section provides an overview of the platform’s structure, including user workflows, visual layout (wireframes), and database design (ERD), which together guide the user experience and data flow throughout the application.
+## Technologies
 
-<details>
-  <summary><strong>Platform Structure</strong></summary>
+- **Frontend**:  
+  - React
+- **Backend**:  
+  - Django REST Framework
+- **Database**:  
+  - PostgreSQL
+- **Deployment**:  
+  - [Relevant services]()
 
-1. User Authentication (Signup/Login)
-   - *Sign Up*:
-     - Fields: Username, password. (email)
-     - Optional: Email verification to prevent spam.
-   - *Login*:
-     - Fields: Username, password.
-     - "Forgot password" flow for recovery.
+---
 
-2. Categorized Resource Listings
+## Agile Development Process
 
-   - *Categories*:
-     - Divide resources into logical groups like:
-       - Programming Languages and frameworks (HTML, CSS, JavaScript, Python, Django, etc.)
-       - Tools (IDEs, testing tools, etc.)
-     - Each category should be filterable and searchable.
-   - *Search*:
-     - A dynamic search bar to filter by keywords.
-     - Optional: Filters like "highest-rated," "most recent."
+#### Our Agile Approach:
 
-3. Resource Submission Form
-
-   - Available only to logged-in users.
-   - *Fields*:
-     - URL link (required).
-     - Short description (required): Why the resource is useful.
-     - Category selection (dropdown - required).
-   - *Submission Review*:
-     - Auto-approval or admin approval for submitted resources (depending on how open we want it)?
-
-4. Rating & Commenting System
-
-   - *Ratings*:
-     - Simple 1-5 star system or thumbs up/thumbs down.
-     - Aggregate rating score displayed on each resource.
-   - *Comments*:
-     - Logged-in users can leave short reviews or comments on each resource.
-     - Optional: Upvote/downvote system for comments to highlight helpful feedback.
-
-5. Admin Dashboard (Optional)
-
-   - *Moderation*:
-     - Admins can approve/reject submitted resources.
-     - Flagged comments or resources can be reviewed and moderated.
-   - *Analytics*:
-     - Track which resources are most popular, user engagement, etc.
-
-**[Back to Contents](#content)**
-
-</details>
+- The development of *LazyDog* is guided by Agile principles, emphasizing flexibility, continuous improvement, and rapid adaptation to change. While not strictly adhering to traditional Agile practices such as scheduled sprints or scrums, the development process is inspired by Agile methodologies.
 
 <details>
-  <summary><b>Flow diagram</b></summary>
-  
-The flow diagram illustrates the user's journey through the platform, showing how they interact with features such as signing up, submitting resources, and providing feedback.
-
-![Flow Diagram](path_to_flow_diagram_image)
-
-</details>
-
-<details>
-  <summary><b>Wireframes</b></summary>
-  
-The wireframes provide a visual representation of the platform's interface, showing the layout and positioning of elements.
-
-![Wireframe 1](#path_to_wireframe_image)
-
-</details>
-
-<details>
-  <summary><b>Entity Relationship Diagram (ERD)</b></summary>
-  
-The ERD illustrates the structure of the database and the relationships between entities, such as users, resources, ratings, and comments.
-
-![ERD](#path_to_erd_image)
-
-</details><br>
-
-**[Back to Contents](#content)**
-
-## Skeleton (How is it designed?)
-
-This section focuses on the detailed design of individual components within the platform. It provides insights into the layout and interaction of key elements such as buttons, forms, and resource cards. The goal is to create an intuitive, user-friendly experience that enhances navigation and interaction with the platform.
-
-<details>
-  <summary><strong>Initial Design Plan</strong></summary>
-
-1. **Homepage (Landing Page)**
-   - *Header*: Contains site logo and navigation links (Home, Resources, (categories dropdown), Contribute (form), About, Login/Signup).
-   - *Search Bar*: Prominent search bar for quick access to resources.
-   - *Popular Categories*: Highlights the main categories such as Programming and Tools.
-   - *Trending Resources*: Displays top-rated or recently popular resources.
-   - *Call to Action*: Encourages users to sign up to contribute and engage with the platform.
-
-2. **Resource Cards / Resource Listin Page**
-   - Each *individual resource* is displayed as a card, showing the title, description, category, (star-)rating, no of likes and comments.
-   - *Interaction Elements*: Includes buttons for viewing more details, rating, and leaving comments.
-   - *Category View*: When a category is selected, display all resources under that category.
-   - *Additionals*: Include a sidebar or top filter options for sorting by rating, date, etc.
-
-3. **Forms**
-   - *Signup/Login Form*: Simple, user-friendly forms with fields for username and password. Optional email field for signup and/or option for social login (if desired, e.g., Google, GitHub) to make the process faster.
-   - *Resource Submission Form*: Allows logged-in users to submit resources, including fields for the URL, description, and category selection.
-
-4. **Resource Detail Page**
-   - *Full Resource View*: Display full resource description and link. Show comments and ratings.
-   - *Interactive Section*: Logged-in users can rate the resource and leave a comment.
-
-5. **User Dashboard**
-   - Available after login.
-     - *My Submissions*: Displays the user's submitted resources with options to edit or delete.
-     - *My Comments*: Shows a history of the user’s comments.
-   - *Submit Resource*: Direct access to the submission form.
-
-6. **Admin Dashboard (Optional)**
-   - For moderation and analytics, admins can manage submitted resources, review flagged content, and track engagement.
-     i.e. Admins can see a queue of newly submitted resources for approval, option to manage user accounts, if needed.
-
-**[Back to Contents](#content)**
-
-</details><br>
-
-**[Back to Contents](#content)**
-
-## Surface (What does it look like?)
-
-The platform has a modern design with a focus on usability and accessibility. The color scheme and typography were carefully selected to maintain readability, while responsive design ensures usability across different device types.
-
-<details>
-<summary><b>Color scheme</b></summary><br>
-
-### Dark palette
-  
-![x](docs/ella/designs/color-fonts/color/ld-dark-palette.png)
-
-### Bright palette
-
-![X](docs/ella/designs/color-fonts/color/ld-dark-palette.png)
-
-**[Back to Contents](#content)**
-
-</details>
-
-<details>
-<summary><b>Typography</b></summary><br>
-
-**[Back to Contents](#content)**
-
-</details>
-
-<details>
-<summary><b>Imagery</b></summary><br>
-
-**[Back to Contents](#content)**
-
-</details>
-
-<details>
-<summary><b>List of Tools & Services</b></summary>
-
+<summary><b>Read more</b></summary>
 <br>
 
-- [Am I Responsive?](http://ami.responsivedesign.is/) is used to show the website image on a range of devices.
-- [ASPOSE](https://products.aspose.app/pdf/sv/conversion/jpg-to-webp#) is used to convert image to WEBP.
-- [Balsamiq](https://balsamiq.com/) is used to create wireframes.
-- [Coolors](https://coolors.co/) is used to create the colour scheme palette.
-- [CSS Validation Service](https://jigsaw.w3.org/css-validator/#validate_by_input) is used to check code ensuring that my CSS is error-free and adheres to the latest web standards.
-- [DevTools](https://developer.chrome.com/docs/devtools) to help in edit pages on-the-fly and diagnose problems quickly.
-- [Diffchecker - text](https://www.diffchecker.com/text-compare/) is used to check code snippets.
-- [Favicon.io](https://favicon.io/) is used to create favicon.
-- [Font Awesome](https://fontawesome.com/) is used for the iconography on the website.
-- [Git](https://git-scm.com/) is used for version control.
-- [Gitpod](https://gitpod.io) streamlines your development process by providing a pre-configured, cloud-based development environment that's instantly ready for coding.
-- [Github](https://github.com/) is essential for version control, allowing you to track changes, collaborate with others (if applicable), and secure online code storage.
-- [Google Dev Tools](https://developers.google.com/web/tools) is used during testing, debugging and styling.
-- [Google Fonts](https://fonts.google.com/) is a catalog of free, open-source fonts. Used for typography.
-- [Looka](https:www.looka.com) ia used for the logo and symbol.
-- [Markup Validation Service](https://validator.w3.org/) is used to check code ensuring that my HTML is error-free and adheres to the latest web standards.
-- [NVDA](https://www.nvaccess.org/download/), NonVisual Desktop Access is a free and open-source, portable screen reader for Microsoft Windows.
-- [Tiny PNG](https://tinypng.com/) is used to compress images.
-- [UXwing](https://uxwing.com/) is a provider of free icons free for commercial use.
-- [Wave](https://wave.webaim.org) is a suite of evaluation tools that helps authors make their web content more accessible to individuals with disabilities.
-- [Web Disability Sim](https://chromewebstore.google.com/detail/web-disability-simulator/olioanlbgbpmdlgjnnampnnlohigkjla) is a google chrome extension that allows you to view your site as people with accessibility needs would see it.
+- Instead of working within defined sprint timelines, the project focuses on milestones that align with the overall vision. This straightforward approach prioritizes the development of core functionalities first, allowing for a solid foundation before expanding into more complex features.
 
-</details><br>
+- Bugs and issues encountered during development are recorded as bug issues and added to the backlog. This strategy allows for continuous progress in other areas while ensuring that the backlog is revisited periodically. Prioritization is based on the severity and impact of the issues, maintaining development momentum while systematically addressing and resolving concerns.
 
-**[Back to Contents](#content)**
+- User feedback is actively sought and analyzed to identify areas for improvement, ensuring that LazyDog evolves to meet the needs and expectations of its users effectively.
+
+### MoSCoW Prioritization
+
+- To assist with task prioritization, labels have been added to user stories.
+- The MoSCoW method involves categorizing tasks with the following labels:
+  - **MUST HAVE**
+  - **SHOULD HAVE**
+  - **COULD HAVE**
+  - **WON'T HAVE**
+- This method helps ensure that essential features are completed first, optimizing resource allocation and effectively guiding the project's development priorities.
+
+For more details, please follow this link to our [GitHub Kanban board](https://github.com/orgs/ci-companeros/projects/2).
+</details>
+
+
+---
+
+## Installation
+To set up the project locally, follow these steps:
+
+1. Clone the Repository:
+   ```bash
+   git clone https://github.com/your-username/lazydog.git
+
+2. Navigate to the Project Directory:
+    ```
+    cd lazydog
+    ```
+
+3. Install Backend Dependencies:
+    ```
+    pip install -r requirements.txt
+    ```
+
+
+4. Install Frontend Dependencies:
+    ```
+    npm install
+    ```
+
+
+5. Run the Backend Server:
+    ```
+    python manage.py runserver
+    ```
+
+
+6. Run the Frontend Development Server:
+    ```
+    npm start
+    ```
+
+---
+
+## Usage
+
+For detailed instructions on using the LazyDog platform, refer to the [Usage Guide.]()
+
+---
+
+## Design Details
+
+This section provides an overview of the core design elements for the platform, with links to detailed documents.
+
+### Development Framework - 5 Planes of Web Development
+Our design and development process follows the **5 Planes of Web Development**: **Strategy, Scope, Structure, Skeleton, and Surface**. This framework guides our approach to ensure a user-centered design.
+
+- **[Design Document - 5 Planes Framework](#)**
+
+---
+
+### Frontend Design
+
+- **[Design Document - Color Schemes & Typography](#)**
+- **[Design Document - Wireframes](#)** (Figma design?)
+- **[Design Document - UI Components](#)** 
+
+---
+
+### Backend Design
+
+- **[Design Document - Entity Relationship Diagram (ERD)](#)**
+
+---
+
+### Workflow & Processes
+This section covers both frontend user interactions and backend processes, detailing how data flows through the platform.
+
+- **[Design Document - Workflow](#)**
+
+---
+
+### User Experience
+
+- **[Design Document - Wireframes](#)**
+
+
+#### Defensive Design
+
+
+Defensive design ensures a smooth user experience by providing clear feedback during user interactions.
+
+- **Success Messages**:  
+  Users receive positive feedback after successfully completing actions, confirming their requests were processed.
+
+  ![Success message]()
+
+- **Error Handling**:  
+  If an action fails due to invalid data or other issues, users get specific, actionable error messages to guide them.
+
+  ![Error message]()
+
+
 
 ## Testing
 
-The goal of testing is to ensure that the application functions correctly, delivers a smooth user experience, and performs well across different devices and browsers. Testing helps to identify and fix bugs, validate the design, and ensure that the system meets the defined requirements before deployment.
-
-The project underwent rigorous testing to ensure the functionality works as intended, with special focus on usability and performance across devices. Manual and automated tests were conducted to confirm that the app functions smoothly in various scenarios.
+Testing is integral to ensuring the application operates as intended. Comprehensive testing documentation, including strategies and results, is available in the [Testing Document.]()
 
 <details>
 <summary><b>What we tested</b></summary>
 <br>
 
 - **Functionality**: Ensured that all features—such as resource submissions, ratings, and comments—work as intended.
-- **Usability**: Validated that users can navigate easily, interact with elements, and complete actions like signing up, logging in, and searching for resources.
+- **Usability**: Validated that users can navigate easily, interact with elements, and complete actions like signing up, logging in, submit and searching for resources.
 - **Performance**: Checked the app's responsiveness, load times, and efficiency, especially on mobile devices.
 
 </details>
@@ -362,36 +329,16 @@ The project underwent rigorous testing to ensure the functionality works as inte
 
 </details>
 
-<details>
-<summary><b>Test report</b></summary>
-<br>
-  
-- Test execution [result](https://www.example.com)  OBS Ändra länken!
 
-</details><br>
+## Contributing
 
-**[Back to Contents](#content)**
+**Contributions are welcome!** 
+
+Please review the [Contributing Guidelines]() for more information on how to get involved.
 
 ## Deployment
 
-The site was developed in VS Code/Gitpod, stored in GitHub as the local repository. XX was used to deploy the live website. The instructions to achieve this are below.
-
-<details>
-<summary><b>Local Deployment</b></summary>
-
-### How to Fork
-
-TBD
-
-### How to Clone
-
-TBD
-
-</details>
-
-<br>
-
-**[Back to Contents](#content)**
+Detailed instructions for deploying the application can be found in the [Deployment Guide.]()
 
 ## Credits
 
@@ -400,9 +347,9 @@ Special thanks to our all of you who have contributed to our learning journey an
 <details>
 <summary><b>Code Used</b></summary>
   
-- {{RESOURCE_DESCRIPTION}}, created by {{AUTHOR}} and sourced from [{{SOURCE_NAME}}]({{SOURCE_URL}})
+  - {{RESOURCE_DESCRIPTION}}, created by {{AUTHOR}} and sourced from [{{SOURCE_NAME}}]({{SOURCE_URL}})
 
-**[Back to Contents](#content)**
+*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
 
 </details>
 
@@ -411,11 +358,17 @@ Special thanks to our all of you who have contributed to our learning journey an
 
 - Special thanks to any tutorials, courses, or communities that helped with this project.
 
-</details><br>
+</details>
 
-**[Back to Contents](#content)**
+*<span style="color: blue;">[Back to Content](#table-of-contents)</span>*
+
+
+---
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](C:\Users\ellav\lazydog\LICENSE) file for more details.
 
 ---
 
 *Written by [EVondrus](https://github.com/EVondrus), [JaqiKal](https://github.com/JaqiKal), [NiclO1337](https://github.com/NiclO1337) & [JorgenDIF](https://github.com/JorgenDIF)*
-<!-- markdownlint-enable MD033 -->
