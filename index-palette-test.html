@@ -1,4 +1,5 @@
 <!-- HTML File: index-palette-test.html -->
+<!-- HTML File: index-palette-test.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,67 +11,90 @@
     <!-- Link to External CSS -->
     <link rel="stylesheet" href="assets/styles/palette-test.css" />
   </head>
+
   <body>
-    <!-- Header Section -->
-    <header>
+    <!-- Header Section as a separate row -->
+    <header class="header-row">
       <h1>Welcome to LazyDog Theme Switcher</h1>
       <button id="theme-toggle" class="button-secondary">Toggle Theme</button>
 
-      <!-- Divider -->
+      <!-- Divider to showcase all colors-->
       <div class="divider"></div>
     </header>
 
-    <!-- Main Content Section -->
-    <main>
-      <!-- Introduction Section -->
-      <section>
-        <p>This is a paragraph using the default theme settings. The styles change when toggling between light and dark themes.</p>
-        <!-- Primary Action Button -->
-        <button class="button-primary">Primary Action</button>
+    <!-- Main 3-column container -->
+    <div class="container">
+      <!-- Main content in the 1st column -->
+      <div class="main-content">
+        <!-- Main Content Section -->
+        <main>
+          <!-- Introduction Section -->
+          <section>
+            <p>This is a paragraph using the default theme settings. The styles change when toggling between light and dark themes.</p>
+            <!-- Primary Action Button -->
+            <button class="button-primary">Primary Action</button>
 
-        <!-- Accent Link -->
-        <a href="#" class="link-accent">Accent Link</a>
-      </section>
+            <!-- Accent Link -->
+            <a href="#" class="link-accent">Accent Link</a>
+          </section>
 
-      <!-- Theme Elements Example Section -->
-      <section>
-        <h2>Examples of Theme Elements</h2>
+          <!-- Theme Elements Example Section -->
+          <section>
+            <h2>Examples of Theme Elements</h2>
 
-        <!-- Example Box -->
-        <div class="example-box">
-          <h3>Example Box</h3>
-          <p>This box exemplifies current theme settings, such as background and text colors.</p>
-          <button class="button-primary">Theme Button</button>
-        </div>
+            <!-- Example Box -->
+            <div class="example-box">
+              <h3>Example Box</h3>
+              <p>This box exemplifies current theme settings, such as background and text colors.</p>
+              <button class="button-primary">Theme Button</button>
+            </div>
 
-        <!-- Callout Box -->
-        <div class="callout">
-          <h3>Important Callout</h3>
-          <p>This is an important callout message that uses different colors for better emphasis.</p>
-        </div>
+            <!-- Callout Box -->
+            <div class="callout">
+              <h3>Important Callout</h3>
+              <p>This is an important callout message that uses different colors for better emphasis.</p>
+            </div>
 
-        <!-- Success Message Box -->
-        <div class="success-message">
-          <p>Success! Your action has been completed successfully.</p>
-        </div>
+            <!-- Success Message Box -->
+            <div class="success-message">
+              <p>Success! Your action has been completed successfully.</p>
+            </div>
 
-        <!-- Warning Message Box -->
-        <div class="warning-message">
-          <p>Warning! Please be cautious with this action.</p>
-        </div>
+            <!-- Warning Message Box -->
+            <div class="warning-message">
+              <p>Warning! Please be cautious with this action.</p>
+            </div>
 
-        <!-- Error Message Box -->
-        <div class="error-message">
-          <p>Error! Please correct the highlighted fields.</p>
-        </div>
+            <!-- Error Message Box -->
+            <div class="error-message">
+              <p>Error! Please correct the highlighted fields.</p>
+            </div>
 
-        <!-- JavaScript -->
-        <div class="card">
-          <h3>Featured Card</h3>
-          <p>This card highlights important information and has a hover effect to draw attention.</p>
-        </div>
-      </section>
-    </main>
+            <!-- Card box -->
+            <div class="card">
+              <h3>Featured Card</h3>
+              <p>This card highlights important information and has a hover effect to draw attention.</p>
+            </div>
+          </section>
+        </main>
+      </div>
+
+      <!-- 2nd column -->
+      <div class="additional-column">
+        <h2>Add buttons and other stuff</h2>
+        <p>Additional content for the 2nd column</p>
+        <!-- various button styles - just 4 fun-->
+        <button class="glow" type="button">Glow on hover, using our color scheme for the animation</button>
+        <button class="cell" aria-label="Showcase Cell">Hover me</button>
+      </div>
+      <!-- 3rd column -->
+      <div class="additional-column">
+        <h2>Column 3</h2>
+        <p>Additional content for the 3rd column</p>
+      </div>
+    </div>
+
+    <!-- JavaScript file -->
 
     <script src="assets/js/toggle-palette-test.js"></script>
   </body>
