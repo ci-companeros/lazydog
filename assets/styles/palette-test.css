@@ -6,48 +6,9 @@
   box-sizing: border-box;
 }
 
+/* Base font size for easier scaling */
 html {
-  font-size: 100%; /* Base font size for easier scaling */
-}
-
-body {
-  padding: 2rem;
-  line-height: 1.6;
-  font-family: Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background-light);
-  color: #000000;
-}
-
-/* Dark Theme - Sets background and text colors when dark theme is active */
-[data-theme="dark"] body {
-  background-color: var(--background-dark);
-  color: var(--text-dark);
-}
-
-/* Make all media elements responsive */
-img,
-picture,
-video,
-canvas,
-svg {
-  display: block;   /* Prevents inline padding issues */
-  max-width: 100%;  /* Ensures the elements don’t overflow their container */
-}
-
-/* Inherit font styling from parent element to form controls for consistent look */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-/* Remove default underline from links and use the inherited text color */
-a {
-  text-decoration: none;
-  color: inherit;
+  font-size: 100%; 
 }
 
 /* Define global CSS Variables */
@@ -76,9 +37,139 @@ a {
   --success-dark: #7ce38b;
   --callout-dark: #f6d365;
   --warning-dark: #faa356;
+  --global-spacing: 1rem;
 }
 
-/* Styling for primary buttons */
+/* Apply global spacing between all divs */
+div {
+  margin-bottom: var(--global-spacing);
+}
+
+/* MOBILE FIRST PRINCIPLE 
+  - Define the base styles for mobile devices
+  - Use media queries to adjust styles for larger screens
+*/
+
+/* Single-column layout for mobile devices */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: var(--background-light);
+}
+
+/* Dark Theme - Sets background and text colors when dark theme is active */
+[data-theme="dark"] body {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Responsive Images and Media */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;   /* Prevents inline padding issues */
+  max-width: 100%;  /* Ensures the elements don’t overflow their container */
+}
+
+/* Inherit font styling from parent element to form controls for consistent look */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove default underline from links and use the inherited text color */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header row styling */
+header {
+  text-align: center;  
+  padding: 1rem;
+  background-color: var(--background-light);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+[data-theme="dark"] header {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+}
+
+/* Divider element to visualize the colour palette */
+.divider {
+  height: 1rem;
+  margin: 2rem 0;
+  background: linear-gradient(
+    to right,
+    var(--primary-light),
+    var(--secondary-light),
+    var(--accent-light-1),
+    var(--accent-light-2),
+    var(--success-light),
+    var(--warning-light),
+    #1a1a1a,
+    #333
+  );
+}
+
+/* Divider styling in dark mode */
+[data-theme="dark"] .divider {
+  background: linear-gradient(
+    to right,
+    var(--primary-dark),
+    var(--secondary-dark),
+    var(--accent-dark-1),
+    var(--accent-dark-2),
+    var(--success-dark),
+    var(--warning-dark),
+    #aaa,
+    #666
+  );
+}
+
+/* Main Container (Single Column on Mobile) */
+.container {
+  display:flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 768px;
+  padding: 2rem;
+  background-color: inherit;
+}
+
+/* Main Content and Additional Columns Styling with Box Shadow */
+.main-content, .additional-column {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  padding: 1rem;
+  background-color: var(--background-light);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* Light theme box shadow */
+  height: 100%; /* Ensures it takes up full height for centering */
+
+}
+
+[data-theme="dark"] .main-content, 
+[data-theme="dark"] .additional-column {
+  background-color: var(--background-dark);
+  box-shadow: 0 0.25rem 0.5rem rgba(255, 255, 255, 0.5); /* Dark theme box shadow */
+}
+
+/* Primary Button Styling */
 .button-primary {
   background-color: var(--primary-light);
   color: #000000;
@@ -90,18 +181,18 @@ a {
   margin: 0.625rem 0;
 }
 
-/* Button primary styling in dark mode */
+/* Primary Button dark mode style */
 [data-theme="dark"] .button-primary {
   background-color: var(--accent-dark-2);
   color: #000000;
 }
 
-/* Button secondary gradient effect */
+/* Secondary button gradient effect */
 #theme-toggle.button-secondary {
   background: var(--gradient-light-dark);
 }
 
-/* Styling for secondary buttons */
+/* Secondary Button Styling */
 .button-secondary {
   font-size: 1.125rem;
   display: inline-block;
@@ -117,7 +208,6 @@ a {
   border-radius: 0.3em;
   color: #fff;
   height: 2.6rem;
-  text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
   transition: box-shadow 0.15s ease, transform 0.15s ease;
   margin: 0.625rem 0;
 }
@@ -161,7 +251,6 @@ a {
   background-color: var(--background-light);
   color: var(--text-light);
   border: 1px solid var(--accent-light-1);
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 /* Example box for dark mode */
@@ -178,7 +267,8 @@ a {
   padding: 0.9375rem;
   border-left: 4px solid var(--secondary-light);
   margin: 1.25rem 0;
-  transition: background-color 0.3s, border-color 0.3s;
+  border-radius: 0.25rem 0.25rem;
+  border-radius: 0 50px 50px 0;
 }
 
 /* Callout box styling for dark mode */
@@ -187,51 +277,53 @@ a {
   border-color: var(--secondary-dark);
 }
 
-/* Success message box styling */
-.success-message {
-  background-color: var(--success-light);
-  color: #000000;
+/* Success, Warning, Error Boxes */
+.success-message, .warning-message, .error-message {
   padding: 0.625rem;
   border-radius: 0.25rem;
-  margin: 1.25rem 0;
-  transition: background-color 0.3s;
 }
 
-/* Success message styling in dark mode */
+.success-message {
+  background-color: var(--success-light);
+}
+
+.warning-message {
+  background-color: var(--warning-light);
+}
+
+.error-message {
+  background-color: var(--secondary-light);
+  border: 1px solid var(--secondary-light);
+}
+
 [data-theme="dark"] .success-message {
   background-color: var(--success-dark);
 }
 
-/* Warning message box styling */
-.warning-message {
-  background-color: var(--warning-light);
-  color: #000000;
-  padding: 0.625rem;
-  border-radius: 0.25rem;
-  margin: 1.25rem 0;
-  transition: background-color 0.3s;
-}
-
-/* Warning message styling in dark mode */
 [data-theme="dark"] .warning-message {
   background-color: var(--warning-dark);
 }
 
-/* Card component for displaying grouped content */
+[data-theme="dark"] .error-message {
+  background-color: var(--secondary-dark);
+  border-color: var(--secondary-dark);
+}
+
+/* Card component */
 .card {
   background-color: var(--accent-light-2);
   color: #000000;
   padding: 1.25rem;
   border-radius: 0.5rem;
   box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s, transform 0.3s;
+ /* transition: box-shadow 0.3s, transform 0.3s;*/
   margin-bottom: 1.25rem;
 }
 
 /* Card styling in dark mode */
 [data-theme="dark"] .card {
   background-color: var(--accent-dark-2);
-  box-shadow: 0 0.25rem 0.5rem rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0.25rem 0.5rem rgba(246, 211, 101, 0.8);
 }
 
 /* Card hover effect */
@@ -240,68 +332,109 @@ a {
   transform: translateY(-0.3125rem);
 }
 
+/* 2nd columns styles */
 
-/* Error message box styling */
-.error-message {
-  background-color: var(--secondary-light);
-  color: #000000;
-  padding: 0.625rem;
-  border-radius: 0.25rem;
-  margin: 1.25rem 0;
-  border: 1px solid var(--secondary-light);
-  transition: background-color 0.3s, border-color 0.3s;
+/* Glow on hover, credit: https://codepen.io/kocsten/pen/rggjXp */
+.glow {
+    width: 220px;
+    height: 50px;
+    border: 0.1px solid #cea5fb;
+    outline: none;
+    color: #0d1117;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin: 2rem;
 }
 
-/* Error message styling in dark mode */
-[data-theme="dark"] .error-message {
-  background-color: var(--secondary-dark);
-  border-color: var(--secondary-dark);
+.glow:before {
+    content: '';
+    background: linear-gradient(45deg, #fa7970, #f6f9fc, #77bdfb, #a2d2fb, #cea5fb, #7ce38b, #f6d365, #faa356, #fa7970);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .2s ease-in-out;
+    border-radius: 10px;
 }
 
-/* Divider element to visualize the colour palette */
-.divider {
-  height: 1rem;
-  margin: 2rem 0;
-  background: linear-gradient(
-    to right,
-    var(--primary-light),
-    var(--secondary-light),
-    var(--accent-light-1),
-    var(--accent-light-2),
-    var(--success-light),
-    var(--warning-light),
-    #1a1a1a,
-    #333
-  );
+.glow:active {
+    color: #000000
 }
 
-/* Divider styling in dark mode */
-[data-theme="dark"] .divider {
-  background: linear-gradient(
-    to right,
-    var(--primary-dark),
-    var(--secondary-dark),
-    var(--accent-dark-1),
-    var(--accent-dark-2),
-    var(--success-dark),
-    var(--warning-dark),
-    #aaa,
-    #666
-  );
+.glow:active:after {
+    background: transparent;
+}
+
+.glow:hover:before {
+    opacity: 1;
+}
+
+.glow:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #cea5fb;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+/* Single cell styling */
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border: 0.2px solid rgba(45, 1, 63, 0.365);
+  box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), inset -4px -4px 8px rgba(167, 7, 159, 0.2);
+  border-radius: 10px;
+  cursor:grab;
+  font-size: 1rem;
+  font-family: "Acme", sans-serif;
+  color: #2d013f;
+  aspect-ratio: 1 / 1; /* Ensures a square shape */
+  padding: 1.5rem;
+
+}
+
+/* Hover and focus styles */
+.cell:hover,
+.cell:focus {
+  background-color: #fffb08;
+  border: 5px ridge #2d013f;
+  transform: scale(1.05);
 }
 
 /**************************/
 /***  Responsive Design ***/
 /**************************/
 
-/* Center content only for larger screens */
+/* Responsive Layout: 3-Column Grid on Larger Screens */
 @media (min-width: 768px) {
-  body {
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    max-width: 1200px;
+  }
+
+  .main-content {
+    grid-column: 1 / 2;
   }
 }
