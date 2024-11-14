@@ -1,77 +1,60 @@
 <!-- HTML File: index-palette-test.html -->
-<!-- HTML File: index-palette-test.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Meta Information -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Title -->
     <title>Light and Dark Theme Example</title>
-    <!-- Link to External CSS -->
     <link rel="stylesheet" href="assets/styles/palette-test.css" />
   </head>
 
   <body>
-    <!-- Header Section as a separate row -->
-    <header class="header-row">
+    <!-- Header Section with correct margin class -->
+    <header class="header-row margin-bottom-2rem">
       <h1>Welcome to LazyDog Theme Switcher</h1>
       <button id="theme-toggle" class="button-secondary">Toggle Theme</button>
-
-      <!-- Divider to showcase all colors-->
       <div class="divider"></div>
     </header>
 
-    <!-- Main 3-column container -->
     <div class="container">
       <!-- Main content in the 1st column -->
-      <div class="main-content">
-        <!-- Main Content Section -->
+      <div class="main-content margin-bottom-2rem">
         <main>
-          <!-- Introduction Section -->
-          <section>
+          <!-- Introduction Section with margin class -->
+          <section class="margin-bottom-2rem">
             <p>This is a paragraph using the default theme settings. The styles change when toggling between light and dark themes.</p>
-            <!-- Primary Action Button -->
-            <button class="button-primary">Primary Action</button>
-
-            <!-- Accent Link -->
-            <a href="#" class="link-accent">Accent Link</a>
+            <button class="button-primary margin-bottom-2rem">Primary Action</button>
+            <a href="#" class="link-accent margin-bottom-2rem">Accent Link</a>
           </section>
 
           <!-- Theme Elements Example Section -->
           <section>
             <h2>Examples of Theme Elements</h2>
 
-            <!-- Example Box -->
-            <div class="example-box">
+            <div class="example-box margin-bottom-2rem">
               <h3>Example Box</h3>
               <p>This box exemplifies current theme settings, such as background and text colors.</p>
               <button class="button-primary">Theme Button</button>
             </div>
 
-            <!-- Callout Box -->
-            <div class="callout">
+            <div class="callout margin-bottom-2rem">
               <h3>Important Callout</h3>
               <p>This is an important callout message that uses different colors for better emphasis.</p>
             </div>
 
-            <!-- Success Message Box -->
-            <div class="success-message">
+            <div class="success-message margin-bottom-2rem">
               <p>Success! Your action has been completed successfully.</p>
             </div>
 
-            <!-- Warning Message Box -->
-            <div class="warning-message">
+            <div class="warning-message margin-bottom-2rem">
               <p>Warning! Please be cautious with this action.</p>
             </div>
 
-            <!-- Error Message Box -->
-            <div class="error-message">
+            <div class="error-message margin-bottom-2rem">
               <p>Error! Please correct the highlighted fields.</p>
             </div>
 
-            <!-- Card box -->
-            <div class="card">
+            <div class="card margin-bottom-2rem">
               <h3>Featured Card</h3>
               <p>This card highlights important information and has a hover effect to draw attention.</p>
             </div>
@@ -82,19 +65,19 @@
       <!-- 2nd column -->
       <div class="additional-column">
         <h2>Add buttons and other stuff</h2>
-        <p>Additional content for the 2nd column</p>
-        <!-- various button styles - just 4 fun-->
-        <button class="glow" type="button">Glow on hover, using our color scheme for the animation</button>
-        <button class="cell" aria-label="Showcase Cell">Hover me</button>
+        <button class="btn-glow margin-bottom-2rem" aria-label="button">Glow on hover, using our color scheme for the animation</button>
+        <button class="btn-sunken-one margin-bottom-2rem" aria-label="button">Hover & step down</button>
+        <button class="btn-sunken-two margin-bottom-2rem" aria-label="button">Hover & step down</button>
+        <button class="btn-oldschool margin-bottom-2rem" aria-label="button">Old school</button>
+        <button class="btn-slide margin-bottom-2rem" aria-label="button">Slide inside effect</button>
+        <div class="speech-bubble-left margin-bottom-2rem"><p>Hey, I’m glowing!</p></div>
       </div>
+
       <!-- 3rd column -->
       <div class="additional-column">
-        <h2>Column 3</h2>
-        <p>Additional content for the 3rd column</p>
+        <h2>Column 3 - Additional content</h2>
       </div>
     </div>
-
-    <!-- JavaScript file -->
 
     <script src="assets/js/toggle-palette-test.js"></script>
   </body>
