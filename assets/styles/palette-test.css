@@ -45,6 +45,11 @@ div {
   margin-bottom: var(--global-spacing);
 }
 
+/* Utility Class for Bottom Margin */
+.margin-bottom-2rem {
+  margin-bottom: 2rem;
+}
+
 /* MOBILE FIRST PRINCIPLE 
   - Define the base styles for mobile devices
   - Use media queries to adjust styles for larger screens
@@ -137,6 +142,10 @@ header {
     #666
   );
 }
+
+/****************************/
+/***  1st columns styles  ***/
+/*********1******************/
 
 /* Main Container (Single Column on Mobile) */
 .container {
@@ -332,10 +341,12 @@ header {
   transform: translateY(-0.3125rem);
 }
 
-/* 2nd columns styles */
+/***************************/
+/***  2nd columns styles ***/
+/***************************/
 
-/* Glow on hover, credit: https://codepen.io/kocsten/pen/rggjXp */
-.glow {
+/* Glow on hover, amended from: https://codepen.io/kocsten/pen/rggjXp */
+.btn-glow {
     width: 220px;
     height: 50px;
     border: 0.1px solid #cea5fb;
@@ -345,10 +356,10 @@ header {
     position: relative;
     z-index: 0;
     border-radius: 10px;
-    margin: 2rem;
+    margin: 2rem 0;
 }
 
-.glow:before {
+.btn-glow:before {
     content: '';
     background: linear-gradient(45deg, #fa7970, #f6f9fc, #77bdfb, #a2d2fb, #cea5fb, #7ce38b, #f6d365, #faa356, #fa7970);
     position: absolute;
@@ -365,19 +376,19 @@ header {
     border-radius: 10px;
 }
 
-.glow:active {
+.btn-glow:active {
     color: #000000
 }
 
-.glow:active:after {
+.btn-glow:active:after {
     background: transparent;
 }
 
-.glow:hover:before {
+.btn-glow:hover:before {
     opacity: 1;
 }
 
-.glow:after {
+.btn-glow:after {
     z-index: -1;
     content: '';
     position: absolute;
@@ -395,31 +406,199 @@ header {
     100% { background-position: 0 0; }
 }
 
-/* Single cell styling */
-.cell {
+/* Button - sunken */
+.btn-sunken-one {
   width: 100px;
   height: 100px;
   background-color: white;
   transition: background-color 0.3s ease, transform 0.2s ease;
-  border: 0.2px solid rgba(45, 1, 63, 0.365);
-  box-shadow: inset 6px 6px 12px rgba(45, 1, 63, 0.753), inset -4px -4px 8px rgba(167, 7, 159, 0.2);
+  border: 0.2px solid rgb(206, 165, 251, 0.365);
+  box-shadow: inset 6px 6px 12px rgba(206, 165, 251, 0.753), inset -4px -4px 8px rgba(206, 165, 251, 0.2);
   border-radius: 10px;
   cursor:grab;
   font-size: 1rem;
   font-family: "Acme", sans-serif;
   color: #2d013f;
   aspect-ratio: 1 / 1; /* Ensures a square shape */
-  padding: 1.5rem;
-
+  padding: 1.1rem;
+  margin: 0 0 2rem;
 }
 
-/* Hover and focus styles */
-.cell:hover,
-.cell:focus {
-  background-color: #fffb08;
-  border: 5px ridge #2d013f;
-  transform: scale(1.05);
+.btn-sunken-one:hover,
+.btn-sunken-one:focus {
+  background-color: #f6d365;
+  border: 5px ridge rgba(206, 165, 251);
+  
 }
+
+
+/* Button - Refined Sunken Effect */
+.btn-sunken-two {
+  width: 150px;
+  height: 80px;
+  background: linear-gradient(145deg, #f6d365, #fffbcc); /* Ensures the color is applied */
+  border: none;
+  box-shadow: 
+    inset 4px 4px 10px rgba(206, 165, 251, 0.3), 
+    inset -6px -6px 12px rgba(206, 165, 251, 0.6),
+    6px 6px 10px rgba(206, 165, 251, 0.1);
+  border-radius: 12px;
+  cursor: grab;
+  font-size: 1rem;
+  font-family: "Acme", sans-serif;
+  color: #2d013f;
+  aspect-ratio: 1 / 1; /* Keeps a square shape */
+  padding: 1rem;
+  margin: 0 0 2rem;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect - subtle lift */
+.btn-sunken-two:hover {
+  background: linear-gradient(145deg, #ffd182, #f6d365); /* Gradient with visible color change */
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 
+    inset 4px 4px 10px rgba(206, 165, 251, 0.25), 
+    inset -6px -6px 12px rgba(206, 165, 251, 0.4),
+    8px 8px 15px rgba(206, 165, 251, 0.2);
+}
+
+/* Active effect - deeper press */
+.btn-sunken-two:active {
+  background: linear-gradient(145deg, #e5c34a, #f6d365); /* Darker for pressed effect */
+  transform: translateY(2px); /* Sunken effect on click */
+  box-shadow: 
+    inset 8px 8px 15px rgba(206, 165, 251, 0.5), 
+    inset -8px -8px 15px rgba(206, 165, 251, 0.7);
+}
+
+
+
+/* Old school button style */
+.btn-oldschool {
+	box-shadow:inset 0px 1px 0px 0px #a8d2f7;
+	background:linear-gradient(to bottom, #77bdfb 5%, #77a1fb 100%);
+	background-color:#77bdfb;
+	border-radius:6px;
+	border:1px solid #77a1fb;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #77a1fb;
+  margin: 0 0 2rem;
+}
+.btn-oldschool:hover {
+	background:linear-gradient(to bottom, #77a1fb 5%, #77bdfb 100%);
+	background-color:#77a1fb;
+}
+.btn-oldschool:active {
+	position:relative;
+	top:1px;
+}
+
+
+/* Button - slide */
+.btn-slide {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border-radius: 10rem;
+  color: #088bfd;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  position: relative;
+  overflow: hidden;
+  border: none; /* Remove any border */
+  outline: none; /* Remove outline on focus */
+  z-index: 1;
+  transition: color 0.3s ease; /* Only color change on text */
+  margin: 0 0 2rem;
+}
+
+.btn-slide::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #a2d2fb; /* Original background color */
+  border-radius: 10rem;
+  z-index: -2;
+}
+
+.btn-slide::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #7ce38b; /* Hover color */
+  border-radius: 10rem;
+  z-index: -1;
+  transition: width 0.3s ease; /* Smooth sliding effect */
+}
+
+.btn-slide:hover {
+  color: #26462b; /* New text color on hover */
+}
+
+.btn-slide:hover::before {
+  width: 100%; /* Expands from left to right */
+}
+
+/* Talk bubble with glow */
+.speech-bubble-left {
+  position: relative;
+  background-color: #333; /* Matches pointer background */
+  color: #a2d2fb; /* Text color */
+  padding: 20px 30px;
+  border-radius: 25px; /* Rounded corners for bubble shape */
+  font-size: 1.2em;
+  max-width: 300px;
+  text-align: center;
+  animation: glow-animation 3s linear infinite; /* Glowing animation */
+  text-shadow: 0 0 10px #77bdfb, 0 0 20px #a2d2fb, 0 0 30px #7ce38b;
+  box-shadow: 0 0 10px #77bdfb, 0 0 20px #a2d2fb, 0 0 30px #7ce38b;
+}
+
+/* Glowing animation */
+@keyframes glow-animation {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Left-aligned speech bubble pointer */
+.speech-bubble-left::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -19px; /* Adjusted to blend seamlessly with bubble */
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-right-color: #333; /* Exact match with bubble background */
+  filter: drop-shadow(0 0 10px #77bdfb) drop-shadow(0 0 20px #a2d2fb); /* Glowing effect for pointer */
+  z-index: -1; /* Places pointer below text */
+}
+
+
+
+/***************************/
+/***  3d columns styles  ***/
+/***************************/
+
 
 /**************************/
 /***  Responsive Design ***/
