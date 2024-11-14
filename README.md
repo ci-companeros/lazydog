@@ -16,7 +16,7 @@
 
 *LazyDog* is a collaborative student resource-sharing platform, designed and built by four developers as part of a continued learning project following a bootcamp. The platform allows users to share, rate, and comment on educational resources related to various programming and development topics. Our goal is to create a space for students to access, contribute, and engage with high-quality learning materials while reinforcing what we've learned during the bootcamp.
 
-<span style="color: red;">***<a href="https://www.example.com" target="_blank">Live Demo</a>*** OBS FIxa länken!</span> 🚨 🚨 🚨
+<span style="color: red;">***<a href="https://www.example.com" target="_blank">Live Demo</a>*** OBS Fixa länken!</span> 🚨 🚨 🚨
 
 ## Content
 
@@ -174,7 +174,7 @@ For more details on features and to view the user stories, visit our [Kanban boa
 - **Database**:  
   - PostgreSQL
 - **Deployment**:  
-  - [Relevant services](https://example.com)🚨 <span style="color: red;">***OBS FIxa länken!***</span>
+  - [Relevant services](https://example.com)🚨 <span style="color: red;">***OBS Fixa länken!***</span>
 
 **[⬆️Back to Content](#content)**
 
@@ -255,7 +255,7 @@ For more details, please follow this link to our [GitHub Kanban board](https://g
 
 ## Usage
 
-For detailed instructions on using the LazyDog platform, refer to the [Usage Guide.](documentation/guidelines/usage-guide.md)
+For detailed instructions on using the LazyDog platform, refer to the [Usage Guide.](./documentation/guidelines/usage-guide.md)
 
 **[⬆️Back to Content](#content)**
 
@@ -267,23 +267,23 @@ This section provides an overview of the core design elements for the platform, 
 
 Our design and development process follows the **5 Planes of Web Development**: **Strategy, Scope, Structure, Skeleton, and Surface**. This framework guides our approach to ensure a user-centered design.
 
-➡️ **[Design Document - 5 Planes Framework](documentation/design/5-planes/five-planes.md)**
+➡️ **[Design Document - 5 Planes Framework](./documentation/design/5-planes/five-planes.md)**
 
 </details>
 
 <details><summary><span>Frontend Design</span></summary>
 
-➡️ **[Design Document - Color Schemes](documentation/design/color-scheme/)**<br>
-➡️ **[Design Document - Typography](documentation/design/typography/)**<br>
-➡️ **[Design Document - Wireframes](documentation/design/wireframes/)** (Figma design? 🚨🚨🚨) <br>
-➡️ **[Design Document - UI Components](documentation/design/UI-components/)**
+➡️ **[Design Document - Color Schemes](./documentation/design/color-scheme/)**<br>
+➡️ **[Design Document - Typography](./documentation/design/typography/)**<br>
+➡️ **[Design Document - Wireframes](./documentation/design/wireframes/)** (Figma design? 🚨🚨🚨) <br>
+➡️ **[Design Document - UI Components](./documentation/design/UI-components/)**
 
 </details>
 
 <details><summary><span>Backend Design</span></summary>
 
-➡️ **[Design Document - Entity Relationship Diagram](documentation/design/erd/erd-jk.webp)**<br>
-➡️ **[ERD relationships explained](documentation/design/erd/erd-relationship.md)**
+➡️ **[Design Document - Entity Relationship Diagram](./documentation/design/erd/erd.webp)**<br>
+➡️ **[ERD relationships explained](./documentation/design/erd/erd.md)**
 
 </details>
 
@@ -291,13 +291,13 @@ Our design and development process follows the **5 Planes of Web Development**: 
 
 This section covers both frontend user interactions and backend processes, detailing how data flows through the platform.
 
-➡️ **[Design Document - Workflow](documentation/design/flow/)**
+➡️ **[Design Document - Workflow](./documentation/design/flow/)**
 
 </details>
 
 <details><summary><span>User Experience</span></summary>
 
-➡️ **[Design Document - Wireframes](documentation/design/wireframes/)**
+➡️ **[Design Document - Wireframes](./documentation/design/wireframes/)**
 
 </details>
 
@@ -321,7 +321,7 @@ Defensive design ensures a smooth user experience by providing clear feedback du
 
 ## Testing
 
-Testing is integral to ensuring the application operates as intended. Comprehensive testing documentation, including strategies and results, is available in the [Testing Document.](documentation/testing/TESTING.md)
+Testing is integral to ensuring the application operates as intended. Comprehensive testing documentation, including strategies and results, is available in the [Testing Document.](./documentation/testing/TESTING.md)
 
 <details>
 <summary><b>What we tested</b></summary>
@@ -350,11 +350,11 @@ Testing is integral to ensuring the application operates as intended. Comprehens
 
 **Contributions are welcome!**
 
-Please review the [Contributing Guidelines](documentation/guidelines/contribution-guide.md) for more information on how to get involved. 🚨 <span style="color: red;">***OBS FIxa länken!***</span>
+Please review the [Contributing Guidelines](./documentation/guidelines/contribution-guide.md) for more information on how to get involved. 🚨 <span style="color: red;">***OBS Fixa länken!***</span>
 
 ## Deployment
 
-Detailed instructions for deploying the application can be found in the [Deployment Guide.](documentation/guidelines/CONTRIBUTION.md)
+Detailed instructions for deploying the application can be found in the [Deployment Guide.](./documentation/guidelines/CONTRIBUTION.md)
 
 **[⬆️Back to Content](#content)**
 
