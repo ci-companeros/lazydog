@@ -179,7 +179,7 @@ For now, our focus is on delivering a comprehensive, consistent API, with the un
 Consult our [CHANGELOG.md](./#) for changes made over time.
 
 <details>
-<summary>Detailed view CRUP operations</summary>
+<summary>Detailed view CRUD operations</summary>
 
 ### User Model
 
