@@ -6,13 +6,13 @@
 <Summary>Wireframe Design for Desktop</summary>
 <br>
 
-#### Home Page
+### Home Page
 
 ![Home Page](./wireframe-img/home-page.png)
 
 #### Sign Up & Sign In
 
-![SignUp & SignIn Page](./wireframe-img/signup-login-page.png)
+![SignUp & SignIn Page](./wireframe-img/auth-page.png)
 
 #### Resource Page
 
@@ -33,7 +33,6 @@
 #### About Page
 
 ![About Page](./wireframe-img/about-page.png)
-
 
 #### About Detail Page
 
@@ -71,7 +70,7 @@
 
 ![Hero Section](./wireframe-img/top5AndComments-hero.png)
 
-#### Inspiration for Navbar Section:
+#### Inspiration for Navbar Section
 
 ![Navbar Section](./wireframe-img/Hero-Nav.png)
 </details>
