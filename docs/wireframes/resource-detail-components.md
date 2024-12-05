@@ -55,6 +55,39 @@ ResourceDetailPage
     └── ResourceItem  (or similar component for displaying recommendations)
 ```
 
+---
+
+<details>
+<summary><strong>Color System for color mapping</strong></summary>
+
+<br>
+
+   1. **🟧 Orange = Sections**  
+      * Large areas dividing the page into logical parts (e.g., header, footer, main content).
+
+   2. **🟩 Green = Groups of elements**  
+      * Collections of related modules or components, such as the category buttons or the list of resource cards.
+
+   3. **🟪 Purple = Modules (Self-contained units)**  
+      * Complete components that combine several parts, such as a resource card or a widget. These function as cohesive, standalone units.
+
+   4. **🟦 Blue = Parts of modules**  
+      * The individual elements that make up a module, such as buttons, text, ratings, or links.
+
+   5. **🟨 Yellow = Expandable areas**  
+      * Dropdown menus and sections that can be shown/hidden based on user interaction.
+
+   6. **🟥 Red = Dynamic content**  
+      * Content that can update in real time (e.g., number of views, star ratings, user information).
+
+</details>
+
+<br>
+
+![Resource Detail Page Components](../wireframes/component-img/resource-detail-page-component.png)
+
+---
+
 ## Communication Flow
 
 * `ResourceDetailContext` provides data (fetched via custom hooks: `useFetchResource`, `useFetchComments`, `useFetchRecommendations`).
