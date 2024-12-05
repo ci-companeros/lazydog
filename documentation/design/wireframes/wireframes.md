@@ -60,7 +60,7 @@
 <Summary>Wireframes & Designs</summary>
 <br>
 
-#### Inspiration for Carousel Sections on the Home Page:
+### Inspiration for Carousel Sections on the Home Page
 
 <br>
 
