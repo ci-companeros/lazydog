@@ -593,7 +593,68 @@ header {
   z-index: -1; /* Places pointer below text */
 }
 
+/* a-link Gradient Button  */
+.fancy-btn {
+  border-radius: 11px;
+  padding: 16px 36px;
+  min-width: 120px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--accent-dark-2); 
+  position: relative;
+  cursor: pointer;
+  appearance: none; /*Remove any default button styling (such as borders or background)*/
+  outline: none;
+  background: radial-gradient(
+  200% 220% at 11.14% 140%, /* Control the spread and position of the gradient */
+    var(--accent-dark-2) 0%,              
+    #432a78 25%,             
+    #1a0e40 50%,             
+    #1e132f 75%,             
+    #09041e 100%             
+  ); 
+  
+  /* Radial gradient setup for depth */
+  text-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 0 1px inset rgba(255, 255, 255, 0.1); /* Subtle inner shadow */
+  transition: all 0.5s ease-in-out;
+  z-index: 0;
+}
 
+.fancy-btn:hover {
+  background: radial-gradient(
+    120% 120% at 0% 91.51%,
+    rgba(245, 104, 245, 0.7) 0%,  
+    #7a2de5 30%,  
+    rgba(120, 0, 245, 0.6) 55%,
+    #2f3496 80%, 
+    rgba(72, 44, 231, 0.5) 100%       
+  );
+  /* Hover effect */
+  transform: translateY(-3px); /* Lift up effect */
+  box-shadow: 0px 8px 20px rgba(45, 26, 123, 0.8), 0 0 10px rgba(120, 0, 245, 0.6);
+  color: var(--text-light); /* Change text color for contrast */
+}
+
+.fancy-btn::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: -1;
+  transform: scale(0.5);
+}
+
+.fancy-btn:hover::before {
+  opacity: 1; /* Activate glow on hover */
+  transform: scale(1.2); /* Expand glow */
+}
 
 /***************************/
 /***  3d columns styles  ***/
