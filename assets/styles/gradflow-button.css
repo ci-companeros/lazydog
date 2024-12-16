@@ -1,0 +1,153 @@
+/* Position and spread of the gradient */
+@property --pos-x {
+  syntax: '<percentage>';
+  initial-value: 11.14%;
+  inherits: false;
+}
+
+@property --pos-y {
+  syntax: '<percentage>';
+  initial-value: 140%;
+  inherits: false;
+}
+
+@property --spread-x {
+  syntax: '<percentage>';
+  initial-value: 150%;
+  inherits: false;
+}
+
+@property --spread-y {
+  syntax: '<percentage>';
+  initial-value: 180.06%;
+  inherits: false;
+}
+
+/* Initial colors of the gradient */
+
+@property --color-1 {
+  syntax: '<color>';
+  initial-value: #09041e; /* Deep Navy */
+  inherits: false;
+}
+
+@property --color-2 {
+  syntax: '<color>';
+  initial-value: #14092b; /* Deep Purple-Blue */
+  inherits: false;
+}
+
+@property --color-3 {
+  syntax: '<color>';
+  initial-value: #1a0e40; /* Dark Blue */
+  inherits: false;
+}
+
+@property --color-4 {
+  syntax: '<color>';
+  initial-value: #1e132f; /* Muted Purple */
+  inherits: false;
+}
+
+@property --color-5 {
+  syntax: '<color>';
+  initial-value: #09041e; /* Deep Navy */
+  inherits: false;
+}
+
+/* Color stops of the gradient */
+
+@property --stop-1 {
+  syntax: '<percentage>';
+  initial-value: 37.35%;
+  inherits: false;
+}
+
+@property --stop-2 {
+  syntax: '<percentage>';
+  initial-value: 61.36%;
+  inherits: false;
+}
+
+@property --stop-3 {
+  syntax: '<percentage>';
+  initial-value: 78.42%;
+  inherits: false;
+}
+
+@property --stop-4 {
+  syntax: '<percentage>';
+  initial-value: 89.52%;
+  inherits: false;
+}
+
+@property --stop-5 {
+  syntax: '<percentage>';
+  initial-value: 100%;
+  inherits: false;
+}
+
+/* Button styling */
+
+.btn-gradient-flow {
+  border-radius: 11px;
+  border: none;
+  padding: 16px 36px;
+	min-width: 120px;
+  font-size: 16px;
+	line-height: 1;
+  font-weight: 500;
+	font-family: inherit;
+  color: rgba(250, 121, 112, 0.9);
+  position: relative;
+  cursor: pointer;
+	appearance: none;
+  background: radial-gradient(
+    var(--spread-x) var(--spread-y) at var(--pos-x) var(--pos-y),
+    var(--color-1) var(--stop-1),
+    var(--color-2) var(--stop-2),
+    var(--color-3) var(--stop-3),
+    var(--color-4) var(--stop-4),
+    var(--color-5) var(--stop-5)
+  );
+	text-shadow: 0 .5px 1px rgba(0, 0, 0, .75);
+  box-shadow: 0 0 0 1px inset rgba(255, 255, 255, 0.1);
+	outline: none;
+	-webkit-tap-highlight-color: transparent;
+  transition: 
+    --pos-x 0.5s,
+    --pos-y 0.5s,
+    --spread-x 0.5s,
+    --spread-y 0.5s,
+    --color-1 0.5s ,
+    --color-2 0.5s ,
+    --color-3 0.5s ,
+    --color-4 0.5s ,
+    --color-5 0.5s ,
+    --stop-1 0.5s ,
+    --stop-2 0.5s ,
+    --stop-3 0.5s ,
+    --stop-4 0.5s ,
+    --stop-5 0.5s;
+}
+
+/* Hover effect */
+
+.btn-gradient-flow:hover {
+  --pos-x: 0%;
+  --pos-y: 91.51%;
+  --spread-x: 120.24%;
+  --spread-y: 103.18%;
+  
+  --color-1: rgba(245, 104, 245, 0.65);
+  --color-2: #7a2de5; 
+  --color-3: rgba(120, 0, 245, 0.6); 
+  --color-4: #2f3496; 
+  --color-5: rgba(72, 44, 231, 0.5);
+  
+  --stop-1: 0%;
+  --stop-2: 8.8%;
+  --stop-3: 21.44%;
+  --stop-4: 71.34%;
+  --stop-5: 85.76%;
+}
