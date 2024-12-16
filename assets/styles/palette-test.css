@@ -634,7 +634,7 @@ header {
   /* Hover effect */
   transform: translateY(-3px); /* Lift up effect */
   box-shadow: 0px 8px 20px rgba(45, 26, 123, 0.8), 0 0 10px rgba(120, 0, 245, 0.6);
-  color: var(--text-light); /* Change text color for contrast */
+  color: var(--primary-dark); /* Change text color for contrast */
 }
 
 .fancy-btn::before {
