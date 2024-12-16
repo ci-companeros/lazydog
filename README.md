@@ -39,7 +39,6 @@
 
 ## Core Features
 
-
 This section outlines the core functionality of the platform and the key features planned for the Minimum Viable Product (MVP).
 
 1. **User Accounts**:
@@ -280,8 +279,6 @@ Consult our [CHANGELOG.md](./#) for changes made over time.
 </details>
 
 **[Back to Content](#content)**
-
-
 
 ## Technologies
 
