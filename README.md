@@ -25,6 +25,7 @@
 - [Technologies](#technologies)
 - [Installation](#installation)
 - [Design Details](#design-details)
+- [API Overview](#api-overview)
 - [Usage](#usage)
 - [Testing](#testing)
 - [Contributing](#contributing)
@@ -163,7 +164,124 @@ This section outlines the core functionality of the platform and the key feature
 
 For more details on features and to view the user stories, visit our [Kanban board](https://github.com/orgs/ci-companeros/projects/2).
 
-**[⬆️Back to Content](#content)**
+**[Back to Content](#content)**
+
+## API Overview
+
+This chapter outlines the structure of the current stable release for our web application. Our goal is to ensure a consistent and reliable interface for interacting with the various data models that form the core of our system, such as Users, Resources, Comments, and more.
+
+Our API provides a stable set of endpoints that facilitate all the necessary CRUD operations for our application's primary models. This version reflects the current data structures, ensuring smooth interaction between the frontend and backend components. Our approach is designed to provide a reliable contract for any client that consumes this API, whether it's our own frontend or third-party integrations.
+
+We recognize that our API will evolve over time to accommodate new features, enhancements, or structural changes. We strive to maintain backward compatibility whenever possible. Major changes—such as modifying existing endpoints, removing fields, or altering the behavior of the API—will be carefully considered to avoid breaking existing integrations and provide a seamless transition for all consumers.
+
+For now, our focus is on delivering a comprehensive, consistent API, with the understanding that any significant changes will be communicated clearly to ensure stability for current and future clients.
+
+Consult our [CHANGELOG.md](./#) for changes made over time.
+
+<details>
+<summary>Detailed view CRUD operations</summary>
+
+### User Model
+
+| CRUD Operation | Endpoint              | Description           | Example Data (json)                                  | Response          |
+|----------------|-----------------------|-----------------------|------------------------------------------------------|-------------------|
+| Create         | /api/users            | Create a new user     | ```json { "username": "john", "password": "secure", "email": "john@mail.com" }``` | `201 Created`      |
+| Read           | /api/users/{id}       | Retrieve a user       | ```json { "user_id": 1, "username": "john", "role": "admin" }``` | `200 OK`           |
+| Update         | /api/users/{id}       | Update user info      | ```json { "email": "newemail@mail.com" }```                    | `200 OK`           |
+| Delete         | /api/users/{id}       | Delete a user         | -                                                    | `204 No Content`  |
+
+### Resource Model
+
+| CRUD Operation | Endpoint              | Description           | Example Data (json)                                        | Response          |
+|----------------|-----------------------|-----------------------|------------------------------------------------------------|-------------------|
+| Create         | /api/resources        | Create a new resource | ```json { "title": "Learn Python", "description": "A Python guide", "url": "example.com", "category_id": 1 }``` | `201 Created`      |
+| Read All       | /api/resources        | List all resources    | ```json [ { "resource_id": 1, "title": "Learn Python" } ]```   | `200 OK`           |
+| Read Single    | /api/resources/{id}   | Retrieve a resource   | ```json { "resource_id": 1, "title": "Learn Python" }```       | `200 OK`           |
+| Update         | /api/resources/{id}   | Update a resource     | ```json { "title": "Advanced Python" }```                      | `200 OK`           |
+| Delete         | /api/resources/{id}   | Delete a resource     | -                                                    | `204 No Content`  |
+
+### Comment Model
+
+| CRUD Operation | Endpoint              | Description           | Example Data (json)                                           | Response          |
+|----------------|-----------------------|-----------------------|----------------------------------------------------------------|-------------------|
+| Create         | /api/comments         | Create a new comment  | ```json { "resource_id": 1, "content": "Great resource!" }``` | `201 Created`      |
+| Read All       | /api/comments         | List all comments     | ```json [ { "comment_id": 1, "content": "Great resource!" } ]``` | `200 OK`           |
+| Read Single    | /api/comments/{id}    | Retrieve a comment    | ```json { "comment_id": 1, "content": "Great resource!" }```   | `200 OK`           |
+| Update         | /api/comments/{id}    | Update a comment      | ```json { "content": "Updated comment." }```                   | `200 OK`           |
+| Delete         | /api/comments/{id}    | Delete a comment      | -                                                    | `204 No Content`  |
+
+### Rating Model
+
+| CRUD Operation | Endpoint              | Description           | Example Data (json)                                          | Response          |
+|----------------|-----------------------|-----------------------|----------------------------------------------------------------|-------------------|
+| Create         | /api/ratings          | Add a rating          | ```json { "resource_id": 1, "score": 5 }```                       | `201 Created`      |
+| Read All       | /api/ratings          | List all ratings      | ```json [ { "rating_id": 1, "score": 5 } ]```                  | `200 OK`           |
+| Read Single    | /api/ratings/{id}     | Retrieve a rating     | ```json { "rating_id": 1, "score": 5 }```                      | `200 OK`           |
+| Update         | /api/ratings/{id}     | Update a rating       | ```json { "score": 4 }```                                      | `200 OK`           |
+| Delete         | /api/ratings/{id}     | Delete a rating       | -                                                    | `204 No Content`  |
+
+### Flag Model
+
+| CRUD Operation | Endpoint              | Description                    | Example Data (json)                                          | Response          |
+|----------------|-----------------------|--------------------------------|----------------------------------------------------------------|-------------------|
+| Create         | /api/flags            | Create a new flag              | ```json { "resource_id": 1, "reason": "Inappropriate content" }``` | `201 Created`      |
+| Read All       | /api/flags            | List all flags                 | ```json [ { "flag_id": 1, "reason": "Inappropriate content" } ]``` | `200 OK`           |
+| Read Single    | /api/flags/{id}       | Retrieve a flag                | ```json { "flag_id": 1, "reason": "Inappropriate content" }```   | `200 OK`           |
+| Update         | /api/flags/{id}       | Update flag status             | ```json { "status": "Reviewed" }```                             | `200 OK`           |
+| Delete         | /api/flags/{id}       | Delete a flag                  | -                                                    | `204 No Content`  |
+
+### Bookmark Model
+
+| CRUD Operation | Endpoint              | Description           | Example Data (json)                                         | Response          |
+|----------------|-----------------------|-----------------------|----------------------------------------------------------------|-------------------|
+| Create         | /api/bookmarks        | Create a new bookmark | ```json { "resource_id": 1 }```                                | `201 Created`      |
+| Read All       | /api/bookmarks        | List all bookmarks    | ```json [ { "bookmark_id": 1, "resource_id": 1 } ]```          | `200 OK`           |
+| Delete         | /api/bookmarks/{id}   | Delete a bookmark     | -                                                    | `204 No Content`  |
+
+### Category Model
+
+| CRUD Operation | Endpoint              | Description           | Example Data (json)                                          | Response          |
+|----------------|-----------------------|-----------------------|----------------------------------------------------------------|-------------------|
+| Create         | /api/categories       | Create a new category | ```json { "name": "Programming", "description": "Coding-related content" }``` | `201 Created`      |
+| Read All       | /api/categories       | List all categories   | ```json [ { "category_id": 1, "name": "Programming" } ]```     | `200 OK`           |
+| Read Single    | /api/categories/{id}  | Retrieve a category   | ```json { "category_id": 1, "name": "Programming" }```         | `200 OK`           |
+| Update         | /api/categories/{id}  | Update a category     | ```json { "description": "Updated description." }```           | `200 OK`           |
+| Delete         | /api/categories/{id}  | Delete a category     | -                                                    | `204 No Content`  |
+
+### Tag Model
+
+| CRUD Operation | Endpoint              | Description           | Example Data (json)                                         | Response          |
+|----------------|-----------------------|-----------------------|----------------------------------------------------------------|-------------------|
+| Create         | /api/tags             | Create a new tag      | ```json { "name": "Python", "description": "Python-related resources" }``` | `201 Created`      |
+| Read All       | /api/tags             | List all tags         | ```json [ { "tag_id": 1, "name": "Python" } ]```               | `200 OK`           |
+| Read Single    | /api/tags/{id}        | Retrieve a specific tag | ```json { "tag_id": 1, "name": "Python", "description": "Python-related" }``` | `200 OK`           |
+| Update         | /api/tags/{id}        | Update a tag          | ```json { "description": "Updated tag description." }```       | `200 OK`           |
+| Delete         | /api/tags/{id}        | Delete a tag          | -                                                     | `204 No Content`  |
+
+### Notification Model
+
+| CRUD Operation | Endpoint                  | Description                | Example Data (json)                                           | Response          |
+|----------------|---------------------------|----------------------------|----------------------------------------------------------------|-------------------|
+| Create         | /api/notifications        | Create a new notification  | ```json { "user_id": 1, "message": "Your resource has been flagged." }``` | `201 Created`      |
+| Read All       | /api/notifications        | List all notifications     | ```json [ { "notification_id": 1, "message": "Your resource has been flagged." } ]``` | `200 OK`           |
+| Read Single    | /api/notifications/{id}   | Retrieve a notification    | ```json { "notification_id": 1, "message": "Your resource has been flagged." }``` | `200 OK`           |
+| Update         | /api/notifications/{id}   | Update read status         | ```json { "is_read": true }```                                 | `200 OK`           |
+| Delete         | /api/notifications/{id}   | Delete a notification      | -                                                    | `204 No Content`  |
+
+### Audit Model
+
+| CRUD Operation | Endpoint              | Description           | Example Data (json)                                           | Response          |
+|----------------|-----------------------|-----------------------|----------------------------------------------------------------|-------------------|
+| Create         | /api/audits           | Create an audit record | ```json { "user_id": 1, "action": "Created resource", "entity_type": "Resource", "entity_id": 5 }``` | `201 Created`      |
+| Read All       | /api/audits           | List all audit records | ```json [ { "audit_id": 1, "action": "Created resource" } ]``` | `200 OK`           |
+| Read Single    | /api/audits/{id}      | Retrieve an audit record | ```json { "audit_id": 1, "action": "Created resource", "entity_type": "Resource", "entity_id": 5 }``` | `200 OK`           |
+| Delete         | /api/audits/{id}      | Delete an audit record | -                                                    | `204 No Content`  |
+
+</details>
+
+**[Back to Content](#content)**
+
+
 
 ## Technologies
 
@@ -176,7 +294,7 @@ For more details on features and to view the user stories, visit our [Kanban boa
 - **Deployment**:  
   - [Relevant services](https://example.com)🚨 <span style="color: red;">***OBS Fixa länken!***</span>
 
-**[⬆️Back to Content](#content)**
+**[Back to Content](#content)**
 
 ## Agile Development Process
 
@@ -207,7 +325,7 @@ The development of *LazyDog* is guided by Agile principles, emphasizing flexibil
 For more details, please follow this link to our [GitHub Kanban board](https://github.com/orgs/ci-companeros/projects/2).
 </details><br>
 
-**[⬆️Back to Content](#content)**
+**[Back to Content](#content)**
 
 ## Installation
 
@@ -251,13 +369,13 @@ For more details, please follow this link to our [GitHub Kanban board](https://g
 
 </details><br>
 
-**[⬆️Back to Content](#content)**
+**[Back to Content](#content)**
 
 ## Usage
 
 For detailed instructions on using the LazyDog platform, refer to the [Usage Guide.](./documentation/guidelines/usage-guide.md)
 
-**[⬆️Back to Content](#content)**
+**[Back to Content](#content)**
 
 ## Design Details
 
@@ -317,7 +435,7 @@ Defensive design ensures a smooth user experience by providing clear feedback du
 
 </details><br>
 
-**[⬆️Back to Content](#content)**
+**[Back to Content](#content)**
 
 ## Testing
 
@@ -344,7 +462,7 @@ Testing is integral to ensuring the application operates as intended. Comprehens
 
 </details><br>
 
-**[⬆️Back to Content](#content)**
+**[Back to Content](#content)**
 
 ## Contributing
 
@@ -356,7 +474,7 @@ Please review the [Contributing Guidelines](./documentation/guidelines/contribut
 
 Detailed instructions for deploying the application can be found in the [Deployment Guide.](./documentation/guidelines/CONTRIBUTION.md)
 
-**[⬆️Back to Content](#content)**
+**[Back to Content](#content)**
 
 ## Credits
 
@@ -376,7 +494,7 @@ We would like to give special thanks to the tutorials, courses, and communities 
 
 </details><br>
 
-**[⬆️Back to Content](#content)**
+**[Back to Content](#content)**
 
 ## License
 
@@ -385,5 +503,5 @@ This project is licensed under the MIT License. See the [LICENSE](C:\Users\ellav
 ---
 <br>*Readme authors: [EVondrus](https://github.com/EVondrus), [JaqiKal](https://github.com/JaqiKal), [NiclO1337](https://github.com/NiclO1337) & [JorgenDIF](https://github.com/JorgenDIF)*
 
-**[⬆️Back to Content](#content)**
+**[Back to Content](#content)**
 <!-- markdownlint-enable MD033 -->
