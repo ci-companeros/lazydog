@@ -472,11 +472,11 @@ Testing is integral to ensuring the application operates as intended. Comprehens
 
 **Contributions are welcome!**
 
-Please review the [Contributing Guidelines](./documentation/guidelines/contribution-guide.md) for more information on how to get involved. 🚨 <span style="color: red;">***OBS Fixa länken!***</span>
+Please review the [Contributing Guidelines](./documentation/guidelines/contribution-guide.md) for more information on how to get involved.
 
 ## Deployment
 
-Detailed instructions for deploying the application can be found in the [Deployment Guide.](./documentation/guidelines/CONTRIBUTION.md)
+Detailed instructions for deploying the application can be found in the [Deployment Guide.](./documentation/guidelines/project-contribution.md)
 
 **[Back to Content](#content)**
 
@@ -502,7 +502,7 @@ We would like to give special thanks to the tutorials, courses, and communities 
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](C:\Users\ellav\lazydog\LICENSE) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
 
 ---
 <br>*Readme authors: [EVondrus](https://github.com/EVondrus), [JaqiKal](https://github.com/JaqiKal), [NiclO1337](https://github.com/NiclO1337) & [JorgenDIF](https://github.com/JorgenDIF)*
