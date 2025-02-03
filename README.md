@@ -9,12 +9,16 @@
 ![GitHub repo size](https://img.shields.io/github/repo-size/ci-companeros/lazydog?color=black)  <!-- Gray for repo size -->
 
 <div style="display: flex; justify-content: space-around;">
-  <img src="documentation/readme/readme-image/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
-  <img src="documentation/readme/readme-image/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;"><img src="documentation/readme/readme-image/ld-black.jpg" alt="LazyDog with black glasses" style="width: 28%; border-radius: 5%;">
+<img src="documentation/readme/readme-image/astronauts.jpg" alt="LazyDog with black glasses" style="width: 25%; height: 6%; border-radius: 5%;">
+  <img src="documentation/readme/readme-image/lazy-astronauts.jpg" alt="LazyDog with black glasses" style="width: 30%; border-radius: 5%;">
+  <img src="documentation/readme/readme-image/astronauts.jpg" alt="LazyDog with black glasses" style="width: 25%; height: 6%; border-radius: 5%;">
 </div>
 <br>
 
-*LazyDog* is a collaborative student resource-sharing platform, designed and built by four developers as part of a continued learning project following a bootcamp. The platform allows users to share, rate, and comment on educational resources related to various programming and development topics. Our goal is to create a space for students to access, contribute, and engage with high-quality learning materials while reinforcing what we've learned during the bootcamp.
+***LazyDog* is a collaborative student resource-sharing platform**, designed and built by four developers as part of a continued learning project following a bootcamp. 
+
+The platform allows users to share, rate, and comment on educational resources related to various programming and development topics. 
+Our goal is to create a space for students to access, contribute, and engage with high-quality learning materials while reinforcing what we've learned during the bootcamp.
 
 <span style="color: red;">***<a href="https://www.example.com" target="_blank">Live Demo</a>*** OBS Fixa länken!</span> 🚨 🚨 🚨
 
