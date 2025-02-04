@@ -19,7 +19,7 @@ This file defines your personal VS Code editor settings, such as file exclusions
     // This setting automatically formats CSS code when saving the file.
     "[css]": {
       "editor.formatOnSave": false
-    }
+    },
 
     // Sets the number of spaces for indentation (set to 2 here, can be adjusted based on preferences).
     "editor.tabSize": 2,

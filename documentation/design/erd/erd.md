@@ -23,7 +23,7 @@ This model defines users on the platform. It includes attributes such as usernam
 | role        | CharField              | Role of the user (e.g., "User," "Admin")    |
 | created_at  | DateTimeField          | Account Creation Date                       |
 
-### Resource model
+### Resource_item model
 
 The Resource model represents learning resources added to the platform. Each resource includes a title, description, URL, and is categorized by category. Resources are also linked to the user who submitted them, enabling users to engage with and contribute valuable content.
 
@@ -88,7 +88,7 @@ Tags provide a way to add additional metadata to resources, allowing for greater
 | created_at   | DateTimeField         | Tag Creation Date                           |
 | updated_at   | DateTimeField         | Tag Last Updated Date                       |
 
-### Resource_Tag model (Join Table)
+### Resourceitem_Tag model (Join Table)
 
 This join table connects resources to tags, supporting many-to-many relationships between them. Each entry in this table links one resource with one tag, enabling flexible categorization and search functionality.
 
