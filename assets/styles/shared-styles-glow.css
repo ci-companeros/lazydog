@@ -1,0 +1,73 @@
+/* ===================== General Styles ===================== */
+
+/* Global box-sizing rule for consistent layout */
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; /* Ensures smoother text rendering on some browsers */
+}
+
+/* Resets margin and padding for all elements to ensure consistent spacing */
+* {
+  box-sizing: inherit;
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+  margin: 0;
+  padding: 0;
+}
+
+/* ===================== Body and Background ===================== */
+
+/* Styles for the body of the page */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: Arial;
+  justify-content: center;
+  align-items: center;
+  color: #e1e4e8;
+  background-color: #020112;
+  overflow: hidden; /* Disables scrollbars */
+
+  /* Subtle background decoration with radial gradient */
+  &:before {
+    content: '';
+    position: absolute;
+    inset: 40% -60% 0 -60%; /* Adjusts the pseudo-element's positioning */
+    background-image: radial-gradient(ellipse at bottom, #1D0559 0%, #020112 50%);
+    opacity: .4;
+  }
+
+/* ===================== Headings ===================== */
+
+/* Heading style for the main title */
+  h1 {
+    font-size: 2.5rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+
+    /* Gradient effect for text */
+    background-image: linear-gradient(to right, #12264c, #1f1340, #3c1148, #281b3c, #2a054c);
+    -webkit-background-clip: text; /* Clips the background gradient to the text */
+    background-clip: text; /* Standard property for compatibility */
+    color: transparent;
+  }
+
+  /* ===================== Buttons Container ===================== */
+
+  /* Flex container for positioning buttons */
+  .buttons-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap;  /* Wrap buttons to the next line on small screens */  
+    gap: 20px;              
+    padding: 20px;          
+  }
+}
