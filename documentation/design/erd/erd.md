@@ -91,6 +91,7 @@ Tags provide a way to add additional metadata to resources, allowing for greater
 ### Resourceitem_Tag model (Join Table)
 
 This join table connects resources to tags, supporting many-to-many relationships between them. Each entry in this table links one resource with one tag, enabling flexible categorization and search functionality.
+Django automatically generates this join table when using ManyToManyField in the ResourceItem model. It manages resource-tag relationships, allowing flexible categorization and search functionality without requiring manual table creation.
 
 | Attribute    | Type                  | Description                                 |
 |--------------|-----------------------|---------------------------------------------|
