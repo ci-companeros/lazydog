@@ -182,7 +182,7 @@ This table summarizes what each user role is allowed and not allowed to do in th
 <details id="Function-test">
 <summary style="font-size: 1.1em; font-weight: bold;">Functionality Tests</summary>
 
-### Standard Functional Tests EXAMPLE
+### Test  Example 
 
 Functional tests validate how features behave from a **user-facing perspective**. Since some features are **permission-based**, the table includes a `Role` column to clarify the context (e.g., guest, user, or admin). This helps ensure that the same feature behaves correctly across different user types.
 
@@ -192,11 +192,11 @@ Functional tests validate how features behave from a **user-facing perspective**
 | F01  | Submit Form   | Guest  | Guest users can't submit resources      | Open form while logged out, click Submit           | Error message: "Authentication required" | P/F         |        |                  | 250505         |
 | F02  | Submit Form   | User   | Logged-in users can submit resources    | Log in, open form, fill in title + URL, click Submit | Confirmation message shown              | P/F         |        |                  | 250505         |
 
-
-### **Standard Functionality Tests**
+### Standard Functional Tests
 
 | ID  | Feature | Role | What the test verifies | How to execute the test | Expected Result | Pass/Fail | Status | Comments | Execution Date |
 |-----|---------|------|------------------------|--------------------------|------------------|-----------|--------|----------|----------------|
+
 
 ### **Error Handling Tests**
 
