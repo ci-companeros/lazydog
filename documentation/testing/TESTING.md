@@ -163,15 +163,129 @@ This table summarizes what each user role is allowed and not allowed to do in th
 
 | Role               | Description                     | Can                                                                 | Cannot                                                               |
 |--------------------|---------------------------------|----------------------------------------------------------------------|-----------------------------------------------------------------------|
-| ✅ Guest / Public   | Not logged in                   | - View resources (`GET`)<br>- View categories/tags                  | - Create/edit anything<br>- Submit forms, bookmark, rate, comment     |
-| ✅ Authenticated User | Logged in regular user          | - Submit resources<br>- Comment, bookmark, rate<br>- Edit/delete own content | - Manage categories<br>- View audit logs<br>- Access admin-only APIs |
-| ✅ Admin / Superuser | `is_staff` or `is_superuser`     | - Full CRUD<br>- Manage categories<br>- Delete any content<br>- Access audit logs | – (Full access)                                                   |
-| ✅ Moderator (optional) | Limited admin (future role) | - Moderate flagged content<br>- Moderate comments                    | - Backend access<br>- Full admin rights                              |
+| Guest / Public   | Not logged in                   | - View resources (`GET`)<br>- View categories/tags                  | - Create/edit anything<br>- Submit forms, bookmark, rate, comment     |
+| Authenticated User | Logged in regular user          | - Submit resources<br>- Comment, bookmark, rate<br>- Edit/delete own content | - Manage categories<br>- View audit logs<br>- Access admin-only APIs |
+| Admin / Superuser | `is_staff` or `is_superuser`     | - Full CRUD<br>- Manage categories<br>- Delete any content<br>- Access audit logs | – (Full access)                                                   |
+| Moderator (optional) | Limited admin (future role) | - Moderate flagged content<br>- Moderate comments                    | - Backend access<br>- Full admin rights                              |
 
 ---
 
 ## Automated Testing
-- 
+
+We use Django REST Framework’s `APITestCase` to test the API's.
+
+<details id="Auto-test-bookmark">
+<summary style="font-size: 1.1em; font-weight: bold;">Bookmark API Test Coverage (automated)</summary>
+<br>
+
+The following behaviors are covered automatically:
+
+- Creating a bookmark (valid/duplicate/unauthenticated)
+- Deleting bookmarks (own vs others')
+- Filtering bookmarks by user and by resource
+- Listing all bookmarks
+- Validating default ordering by `created_at`
+- Blocking updates (PATCH/PUT) to immutable bookmark records
+
+These tests run against an isolated test database and validate both HTTP responses and data integrity. <BR>
+See [bookmark/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/bookmark/tests.py) for full test coverage.
+
+</details>
+
+<details id="Auto-test-category">
+<summary style="font-size: 1.1em; font-weight: bold;">Category API Test Coverage (automated)</summary>
+<br>
+
+The following behaviors are covered automatically:
+
+- X
+- Y
+- Z
+
+These tests run against an isolated test database and validate both HTTP responses and data integrity.
+See [resource_item/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/category/tests.py) for full test coverage.
+
+</details>
+
+<details id="Auto-test-comment">
+<summary style="font-size: 1.1em; font-weight: bold;">Comment API Test Coverage (automated)</summary>
+<br>
+
+The following behaviors are covered automatically:
+
+- X
+- Y
+- Z
+
+
+These tests run against an isolated test database and validate both HTTP responses and data integrity.
+See [comment/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/comment/tests.py) for full test coverage.
+
+</details>
+
+<details id="Auto-test-flag">
+<summary style="font-size: 1.1em; font-weight: bold;">Flag API Test Coverage (automated)</summary>
+<br>
+
+The following behaviors are covered automatically:
+- X
+- Y
+- Z
+
+Tests will be added under:  
+[flag/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/flag/tests.py)
+
+</details>
+
+<details id="Auto-test-rating">
+<summary style="font-size: 1.1em; font-weight: bold;">Rating API Test Coverage (automated)</summary>
+<br>
+
+The following behaviors are covered automatically:
+
+- X
+- Y
+- Z
+
+These tests run against an isolated test database and validate both HTTP responses and data integrity.
+See [rating/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/rating/tests.py) for full test coverage.
+
+</details>
+
+</details>
+
+<details id="Auto-test-resource">
+<summary style="font-size: 1.1em; font-weight: bold;">ResourceItem API Test Coverage (automated)</summary>
+<br>
+
+The following behaviors are covered automatically:
+
+- X
+- Y
+- Z
+
+These tests run against an isolated test database and validate both HTTP responses and data integrity.
+See [resource_item/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/resource_item/tests.py) for full test coverage.
+
+</details>
+
+</details>
+
+<details id="Auto-test-tag">
+<summary style="font-size: 1.1em; font-weight: bold;">Tag API Test Coverage (automated)</summary>
+<br>
+
+The following behaviors are covered automatically:
+
+- X
+- Y
+- Z
+
+These tests run against an isolated test database and validate both HTTP responses and data integrity.
+See [resource_item/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/tag/tests.py) for full test coverage.
+
+</details>
+
 
 [Back to the Top](#testing-of-lazydog-platform)
 
@@ -251,7 +365,7 @@ Covers all major endpoints, all HTTP methods (GET, POST, PATCH/PUT, DELETE), and
 - Authenticated Regular User
 - Admin (Staff)
 
-## 👤 User API (DRF Default)
+## User API (DRF Default)
 
 | ID  | Endpoint         | Method | Role        | Description                    | Payload | Expected Status | Notes                    | Pass/Fail |
 |-----|------------------|--------|-------------|--------------------------------|---------|------------------|--------------------------|---|
@@ -260,7 +374,7 @@ Covers all major endpoints, all HTTP methods (GET, POST, PATCH/PUT, DELETE), and
 | U03 | /api/users/{id}/ | GET    | Admin       | Get user detail                | –       | 200 OK           |                          |   |
 | U04 | /api/users/{id}/ | GET    | User        | Get another user detail        | –       | 403 Forbidden    |                          |   |
 
-## 📚 ResourceItem API
+## ResourceItem API
 
 | ID  | Endpoint           | Method | Role         | Description                           | Payload                          | Expected Status | Notes    | Pass/Fail |
 |-----|--------------------|--------|--------------|---------------------------------------|----------------------------------|------------------|---------|--|
@@ -272,7 +386,7 @@ Covers all major endpoints, all HTTP methods (GET, POST, PATCH/PUT, DELETE), and
 | R06 | /api/resources/{id}/ | DELETE| User (owner) | Delete own resource                   | –                                | 204 No Content   |        |  |
 | R07 | /api/resources/{id}/ | DELETE| User (other) | Delete someone else's resource        | –                                | 403 Forbidden    |        |  |
 
-## 🗂️ Category API
+## Category API
 
 | ID  | Endpoint           | Method | Role        | Description                         | Payload                      | Expected Status | Notes | Pass/Fail |
 |-----|--------------------|--------|-------------|-------------------------------------|------------------------------|------------------|-------|---|
@@ -302,15 +416,23 @@ Covers all major endpoints, all HTTP methods (GET, POST, PATCH/PUT, DELETE), and
 | RT2 | /api/ratings/    | POST   | Public | Fail: unauthenticated rating     | {resource_item, score}             | 403 Forbidden    |       |  |
 | RT3 | /api/ratings/    | POST   | User | Fail: missing score             | {resource_item}                    | 400 Bad Request  |       |  |
 
-## 🔖 Bookmark API
+## Bookmark API
 
-| ID  | Endpoint         | Method | Role | Description                    | Payload                | Expected Status | Notes | Pass/Fail |
-|-----|------------------|--------|------|--------------------------------|------------------------|------------------|-------|---|
-| BM1 | /api/bookmarks/  | GET    | User | List own bookmarks            | –                      | 200 OK           |       |  |
-| BM2 | /api/bookmarks/  | POST   | User | Add a bookmark                | {resource_item}        | 201 Created      |       |  |
-| BM3 | /api/bookmarks/  | POST   | Public | Fail: add without auth        | {resource_item}        | 403 Forbidden    |       |  |
+| ID   | Endpoint                  | Method | Role      | Description                              | Payload              | Expected Status      | Notes                      | Pass/Fail |
+|------|---------------------------|--------|-----------|------------------------------------------|----------------------|----------------------|----------------------------|-----------|
+| BM1  | /api/bookmarks/           | GET    | User      | List own bookmarks                       | –                    | 200 OK               |                            |           |
+| BM2  | /api/bookmarks/           | POST   | User      | Add a bookmark                           | {resource_item}      | 201 Created          |                            |           |
+| BM3  | /api/bookmarks/           | POST   | Public    | Fail: add without auth                   | {resource_item}      | 403 Forbidden        |                            |           |
+| BM4  | /api/bookmarks/           | GET    | Public    | Anyone can view all bookmarks            | –                    | 200 OK               |                            |           |
+| BM5  | /api/bookmarks/?user=1    | GET    | Public    | Filter bookmarks by user                 | –                    | 200 OK               |                            |           |
+| BM6  | /api/bookmarks/?resource=2| GET    | Public    | Filter bookmarks by resource             | –                    | 200 OK               |                            |           |
+| BM7  | /api/bookmarks/{id}/      | DELETE | OtherUser | Cannot delete another user's bookmark    | –                    | 403 Forbidden        | Permission check           |           |
+| BM8  | /api/bookmarks/{id}/      | DELETE | Owner     | Can delete own bookmark                  | –                    | 204 No Content       |                            |           |
+| BM9  | /api/bookmarks/{id}/      | PATCH  | Owner     | Cannot update a bookmark                 | {resource}           | 400 Bad Request \*   | or 405 if disabled in view |           |
+| BM10 | /api/bookmarks/           | GET    | Public    | Results are ordered by created_at desc   | –                    | 200 OK               | Check default ordering     |           |
 
-## 🏷️ Tag API
+
+## Tag API
 
 | ID  | Endpoint         | Method | Role | Description                    | Payload                    | Expected Status | Notes | Pass/Fail |
 |-----|------------------|--------|------|--------------------------------|----------------------------|------------------|-------|---|
@@ -318,19 +440,19 @@ Covers all major endpoints, all HTTP methods (GET, POST, PATCH/PUT, DELETE), and
 | TG2 | /api/tags/       | POST   | User   | Create new tag                | {name}                     | 201 Created      |       |  |
 | TG3 | /api/tags/       | POST   | Public | Fail: unauthenticated create  | {name}                     | 403 Forbidden    |       |  |
 
-## 🚩 Flag API
+## Flag API
 
 | ID  | Endpoint       | Method | Role | Description               | Payload                        | Expected Status | Notes | Pass/Fail |
 |-----|----------------|--------|------|---------------------------|--------------------------------|------------------|-------|---|
 | FL1 | /api/flags/    | POST   | User | Flag resource or comment | {resource_item, reason}        | 201 Created      | Future extension |  |
 
-## 🔔 Notification API (planned)
+## Notification API (planned)
 
 | ID  | Endpoint            | Method | Role | Description         | Payload | Expected Status | Notes | Pass/Fail |
 |-----|---------------------|--------|------|---------------------|---------|------------------|-------|---|
 | NT1 | /api/notifications/ | GET    | User | View notifications  | –       | 200 OK           | Future |  |
 
-## 📜 Audit Trail (Admin only)
+## Audit Trail (Admin only)
 
 | ID  | Endpoint      | Method | Role  | Description           | Payload | Expected Status | Notes | Pass/Fail |
 |-----|---------------|--------|-------|-----------------------|---------|------------------|-------|---|
