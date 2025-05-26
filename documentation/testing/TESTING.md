@@ -1,5 +1,42 @@
 # Testing of LazyDog Platform
 
+## Table of Contents
+
+- [Testing of LazyDog Platform](#testing-of-lazydog-platform)
+  - [Testing Overview & Environment](#testing-overview--environment)
+    - [Icon Keys](#icon-keys)
+    - [Test Environment](#test-environment)
+    - [Browser Compatibility](#browser-compatibility)
+    - [Responsiveness](#responsiveness)
+  - [Code Validation](#code-validation)
+    - [HTML](#html)
+    - [CSS](#css)
+    - [JavaScript](#javascript)
+    - [Python](#python)
+  - [Lighthouse](#lighthouse)
+    - [Lighthouse Desktop](#lighthouse-desktop)
+    - [Lighthouse Mobile](#lighthouse-mobile)
+  - [User Roles & Permissions](#user-roles--permissions)
+  - [Automated Testing](#automated-testing)
+    - [Bookmark API](#bookmark-api-test-coverage-automated)
+    - [Category API](#category-api-test-coverage-automated)
+    - [Comment API](#comment-api-test-coverage-automated)
+    - [Flag API](#flag-api-test-coverage-automated)
+    - [Rating API](#rating-api-test-coverage-automated)
+    - [ResourceItem API](#resourceitem-api-test-coverage-automated)
+    - [Tag API](#tag-api-test-coverage-automated)
+  - [Manual Testing](#manual-testing)
+    - [Functionality Tests](#functionality-tests)
+    - [Error Handling Tests](#error-handling-tests)
+    - [Integration Tests](#integration-tests)
+    - [Robustness Tests](#robustness-tests)
+    - [Accessibility Tests](#accessibility-tests)
+    - [Responsive Design Tests](#responsive-design-tests)
+    - [API Test Matrix](#api-test--matrix)
+  - [Issues](#issues)
+    - [Solved Issues](#solved-issues)
+    - [Unsolved Issues](#unsolved-issues)
+
 ## Testing Overview & Environment
 
 ### Icon Keys
@@ -180,12 +217,12 @@ We use Django REST Framework’s `APITestCase` to test the API's.
 
 The following behaviors are covered automatically:
 
-- Creating a bookmark (valid/duplicate/unauthenticated)
-- Deleting bookmarks (own vs others')
-- Filtering bookmarks by user and by resource
-- Listing all bookmarks
-- Validating default ordering by `created_at`
-- Blocking updates (PATCH/PUT) to immutable bookmark records
+- ✅ Creating a bookmark (valid/duplicate/unauthenticated)
+- ✅ Deleting bookmarks (own vs others')
+- ✅ Filtering bookmarks by user and by resource
+- ✅ Listing all bookmarks
+- ✅ Validating default ordering by `created_at`
+- ✅ Blocking updates (PATCH/PUT) to immutable bookmark records
 
 These tests run against an isolated test database and validate both HTTP responses and data integrity. <BR>
 See [bookmark/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/bookmark/tests.py) for full test coverage.
