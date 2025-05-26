@@ -227,6 +227,10 @@ The following behaviors are covered automatically:
 These tests run against an isolated test database and validate both HTTP responses and data integrity. <BR>
 See [bookmark/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/bookmark/tests.py) for full test coverage.
 
+Result:
+
+![Bookmark Tests Passed](../testing/TESTING-images/bookmark-ut-250526-1419.webp)
+
 </details>
 
 <details id="Auto-test-category">
