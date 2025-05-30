@@ -244,7 +244,11 @@ The following behaviors are covered automatically:
 - Z
 
 These tests run against an isolated test database and validate both HTTP responses and data integrity.
-See [resource_item/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/category/tests.py) for full test coverage.
+See [category/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/category/tests.py) for full test coverage.
+
+Result:
+
+![Category Tests Passed](../testing/TESTING-images/XXX)
 
 </details>
 
@@ -262,6 +266,10 @@ The following behaviors are covered automatically:
 These tests run against an isolated test database and validate both HTTP responses and data integrity.
 See [comment/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/comment/tests.py) for full test coverage.
 
+Result:
+
+![Comment Tests Passed](../testing/TESTING-images/XXX)
+
 </details>
 
 <details id="Auto-test-flag">
@@ -275,6 +283,10 @@ The following behaviors are covered automatically:
 
 Tests will be added under:  
 [flag/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/flag/tests.py)
+
+Result:
+
+![Flag Tests Passed](../testing/TESTING-images/XXX)
 
 </details>
 
@@ -291,7 +303,9 @@ The following behaviors are covered automatically:
 These tests run against an isolated test database and validate both HTTP responses and data integrity.
 See [rating/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/rating/tests.py) for full test coverage.
 
-</details>
+Result:
+
+![Rating Tests Passed](../testing/TESTING-images/XXX)
 
 </details>
 
@@ -308,7 +322,9 @@ The following behaviors are covered automatically:
 These tests run against an isolated test database and validate both HTTP responses and data integrity.
 See [resource_item/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/resource_item/tests.py) for full test coverage.
 
-</details>
+Result:
+
+![ResourceItem Tests Passed](../testing/TESTING-images/XXX)
 
 </details>
 
@@ -318,15 +334,22 @@ See [resource_item/tests.py](https://github.com/ci-companeros/lazydog-api/blob/m
 
 The following behaviors are covered automatically:
 
-- X
-- Y
-- Z
+- ✅ Creating a tag (as admin only; blocked for regular/unauthenticated users)
+- ✅ Deleting a tag (allowed for admin; forbidden for regular users)
+- ✅ Updating a tag (PATCH by admin only; regular users blocked)
+- ✅ Retrieving a single tag (open to all users, including unauthenticated)
+- ✅ Listing all tags (public access without login)
+- ✅ Slug generation on creation (auto-slugified from tag name)
+- ✅ Enforcing permission rules across all CRUD operations
 
 These tests run against an isolated test database and validate both HTTP responses and data integrity.
 See [resource_item/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/tag/tests.py) for full test coverage.
 
-</details>
+Result:
 
+![Bookmark Tests Passed](../testing/TESTING-images/tag-ut-250530-2332.webp)
+
+</details>
 
 [Back to the Top](#testing-of-lazydog-platform)
 
