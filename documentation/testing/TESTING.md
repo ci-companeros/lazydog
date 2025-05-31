@@ -343,11 +343,14 @@ The following behaviors are covered automatically:
 - ✅ Enforcing permission rules across all CRUD operations
 
 These tests run against an isolated test database and validate both HTTP responses and data integrity.
-See [tag/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/tag/tests.py) for full test coverage.
+See for full test coverage.
+- [tag/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/tag/tests/test_models.py)
+- [tag/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/tag/tests/test_serializers.py)
+- [tag/tests.py](https://github.com/ci-companeros/lazydog-api/blob/main/tag/tests/test_views.py)
 
 Result:
 
-![Bookmark Tests Passed](../testing/TESTING-images/tag-ut-250530-2332.webp)
+![Bookmark Tests Passed](../testing/TESTING-images/tag-ut-250531-0815.webp)
 
 </details>
 
