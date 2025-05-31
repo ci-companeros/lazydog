@@ -334,13 +334,15 @@ Result:
 
 The following behaviors are covered automatically:
 
-- ✅ Creating a tag (as admin only; blocked for regular/unauthenticated users)
-- ✅ Deleting a tag (allowed for admin; forbidden for regular users)
-- ✅ Updating a tag (PATCH by admin only; regular users blocked)
-- ✅ Retrieving a single tag (open to all users, including unauthenticated)
-- ✅ Listing all tags (public access without login)
-- ✅ Slug generation on creation (auto-slugified from tag name)
-- ✅ Enforcing permission rules across all CRUD operations
+- ✅ **Creating a tag** (permitted only for admin users; blocked for regular and unauthenticated users)
+- ✅ **Updating a tag** (PATCH allowed for admins only; regular users are blocked)
+- ✅ **Deleting a tag** (admin-only; unauthorized deletion attempts are rejected)
+- ✅ **Retrieving a single tag** (open to all users, including unauthenticated)
+- ✅ **Listing all tags** (publicly accessible without login)
+- ✅ **Slug generation** (auto-created from tag name upon creation)
+- ✅ **Enforcing access control** (tests confirm permissions are respected across all endpoints)
+- ✅ **Model logic validation** (`__str__`, unique name constraint, slug collision handling)
+- ✅ **Serializer logic validation** (field presence, required and unique name validation)
 
 These tests run against an isolated test database and validate both HTTP responses and data integrity.
 See for full test coverage.
