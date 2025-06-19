@@ -37,6 +37,8 @@ The Resource model represents learning resources added to the platform. Each res
 | url          | URLField              | URL of the Resource                         |
 | created_at   | DateTimeField         | Resource Creation Date                      |
 | updated_at   | DateTimeField         | Resource Last Updated Date                  |
+| avg_rating   | FloatField            | Average Rating for this Resource            |
+| rating_count | IntegerField          | Number of Ratings for this Resource         |
 
 ### Comment model
 
